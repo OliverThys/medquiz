@@ -38,6 +38,16 @@ interface Quiz {
   questions: Question[];
 }
 
+// Fonction pour mélanger un tableau
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
 export default function QuizPage({ params }: { params: Promise<{ id: string }> }) {
   const router = useRouter();
   const [quiz, setQuiz] = useState<Quiz | null>(null);
@@ -55,7 +65,18 @@ export default function QuizPage({ params }: { params: Promise<{ id: string }> }
         const response = await fetch(`/api/quiz/${resolvedParams.id}`);
         if (response.ok) {
           const data = await response.json() as Quiz;
-          setQuiz(data);
+
+          // Mélanger les questions et les réponses
+          const shuffledQuestions = shuffleArray(data.questions);
+          const questionsWithShuffledAnswers = shuffledQuestions.map((question: Question) => ({
+            ...question,
+            answers: shuffleArray(question.answers),
+          }));
+
+          setQuiz({
+            ...data,
+            questions: questionsWithShuffledAnswers,
+          });
         }
       } catch (error) {
         console.error('Error fetching quiz:', error);
