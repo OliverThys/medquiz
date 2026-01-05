@@ -68,7 +68,7 @@ export default function HomePage() {
         {/* Hero Section */}
         <div className="text-center mb-12 animate-fade-in">
           <h1 className="text-4xl sm:text-5xl font-bold text-stone-900 mb-4">
-            Révision Médicale <span className="text-orange-500">Interactive</span>
+            Révision <span className="text-orange-500">Interactive</span>
           </h1>
           <p className="text-lg text-stone-600 max-w-2xl mx-auto">
             Testez vos connaissances avec des QCM adaptés à votre niveau

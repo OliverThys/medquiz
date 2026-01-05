@@ -16,7 +16,7 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "MedQuiz - Révision Médicale Interactive",
+  title: "MedQuiz - Révision Interactive",
   description: "Plateforme moderne de QCM pour réviser vos cours de médecine",
 };
 
