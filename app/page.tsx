@@ -11,6 +11,7 @@ export const dynamic = 'force-dynamic';
 
 export default function HomePage() {
   const [categories, setCategories] = useState<any[]>([]);
+  const [totalQuestions, setTotalQuestions] = useState(0);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -18,8 +19,9 @@ export default function HomePage() {
       try {
         const response = await fetch('/api/categories');
         if (response.ok) {
-          const data = await response.json() as any[];
-          setCategories(data);
+          const data = await response.json() as { categories: any[], _globalTotalQuestions: number };
+          setCategories(data.categories || []);
+          setTotalQuestions(data._globalTotalQuestions || 0);
         }
       } catch (error) {
         console.error('Error fetching categories:', error);
@@ -31,11 +33,6 @@ export default function HomePage() {
   }, []);
 
   const totalQuizzes = categories.reduce((sum, cat) => sum + cat.quizzes.length, 0);
-  // Use the total unique questions per category to avoid double counting
-  const totalQuestions = categories.reduce(
-    (sum, cat: any) => sum + (cat._totalQuestions || 0),
-    0
-  );
 
   if (loading) {
     return (

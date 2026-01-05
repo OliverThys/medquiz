@@ -43,6 +43,7 @@ export async function GET(request: Request) {
         );
 
         // Get total unique questions count for this category (to avoid double counting)
+        // Compter directement toutes les questions uniques de cette catégorie
         const totalQuestionsResult = await DB.prepare(
           `SELECT COUNT(DISTINCT q.id) as count 
            FROM questions q 
@@ -53,12 +54,24 @@ export async function GET(request: Request) {
         return {
           ...category,
           quizzes,
-          _totalQuestions: totalQuestionsResult?.count || 0,
+          _totalQuestions: Number(totalQuestionsResult?.count) || 0,
         };
       })
     );
 
-    return NextResponse.json(categories);
+    // Calculer le total global de toutes les questions uniques (toutes catégories confondues)
+    const globalTotalResult = await DB.prepare(
+      `SELECT COUNT(DISTINCT q.id) as count 
+       FROM questions q 
+       INNER JOIN quizzes qu ON q.quizId = qu.id`
+    ).first();
+    
+    const globalTotal = Number(globalTotalResult?.count) || 0;
+
+    return NextResponse.json({
+      categories,
+      _globalTotalQuestions: globalTotal,
+    });
   } catch (error) {
     console.error('Error fetching categories:', error);
     return NextResponse.json(

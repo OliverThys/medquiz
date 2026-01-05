@@ -27,7 +27,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${inter.variable} ${caveat.variable}`} suppressHydrationWarning>
-      <head>
+      {/* Mode sombre désactivé temporairement */}
+      {/* <head>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -44,8 +45,8 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-      <body className="bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-50 transition-colors">
+      </head> */}
+      <body className="bg-neutral-50 text-neutral-900 transition-colors">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
