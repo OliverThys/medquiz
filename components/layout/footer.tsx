@@ -16,7 +16,7 @@ export function Footer() {
                 clipRule="evenodd"
               />
             </svg>
-            pour <span className="font-semibold text-orange-600">les Picca</span>
+            pour les <span className="font-semibold text-orange-600">Picca</span>
           </p>
           <p className="text-xs text-neutral-500">
             © {new Date().getFullYear()} MAOLYS. Tous droits réservés.
