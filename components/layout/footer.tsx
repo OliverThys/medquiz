@@ -1,12 +1,12 @@
 export function Footer() {
   return (
-    <footer className="border-t border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm mt-auto">
+    <footer className="border-t border-neutral-200 bg-white/80 backdrop-blur-sm mt-auto">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="text-center text-sm text-neutral-600 dark:text-neutral-400">
+        <div className="text-center text-sm text-neutral-600">
           <p className="flex items-center justify-center gap-1.5 mb-1">
             Développé avec
             <svg
-              className="w-4 h-4 text-orange-500 dark:text-orange-400 animate-pulse"
+              className="w-4 h-4 text-orange-500 animate-pulse"
               fill="currentColor"
               viewBox="0 0 20 20"
             >
@@ -16,9 +16,9 @@ export function Footer() {
                 clipRule="evenodd"
               />
             </svg>
-            pour <span className="font-semibold text-orange-600 dark:text-orange-400">Manon Picca</span>
+            pour <span className="font-semibold text-orange-600">Manon Picca</span>
           </p>
-          <p className="text-xs text-neutral-500 dark:text-neutral-500">
+          <p className="text-xs text-neutral-500">
             © {new Date().getFullYear()} MAOLYS. Tous droits réservés.
           </p>
         </div>
