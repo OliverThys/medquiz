@@ -17,41 +17,26 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     setMounted(true);
-    // Récupérer le thème depuis localStorage, par défaut light (pas de préférence système)
-    const savedTheme = localStorage.getItem('theme') as Theme;
-
-    const initialTheme = savedTheme || 'light';
-    setTheme(initialTheme);
-
-    // Appliquer le thème au DOM immédiatement
-    const htmlElement = document.documentElement;
-    if (initialTheme === 'dark') {
-      htmlElement.classList.add('dark');
-    } else {
-      htmlElement.classList.remove('dark');
-    }
+    // Mode sombre désactivé - forcer toujours le mode clair
+    setTheme('light');
     
-    // Forcer la mise à jour du style et du color-scheme
-    htmlElement.style.colorScheme = initialTheme;
-    document.body.style.colorScheme = initialTheme;
+    // Forcer la suppression de la classe dark et du mode sombre
+    const htmlElement = document.documentElement;
+    htmlElement.classList.remove('dark');
+    htmlElement.style.colorScheme = 'light';
+    document.body.style.colorScheme = 'light';
+    
+    // Supprimer le thème dark du localStorage s'il existe
+    if (localStorage.getItem('theme') === 'dark') {
+      localStorage.setItem('theme', 'light');
+    }
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-
-    // Appliquer le thème au DOM immédiatement
-    const htmlElement = document.documentElement;
-    if (newTheme === 'dark') {
-      htmlElement.classList.add('dark');
-    } else {
-      htmlElement.classList.remove('dark');
-    }
-    
-    // Forcer la mise à jour du style et du color-scheme
-    htmlElement.style.colorScheme = newTheme;
-    document.body.style.colorScheme = newTheme;
+    // Mode sombre désactivé - ne rien faire
+    // const newTheme = theme === 'light' ? 'dark' : 'light';
+    // setTheme(newTheme);
+    // localStorage.setItem('theme', newTheme);
   };
 
   // Éviter le flash de contenu non stylé

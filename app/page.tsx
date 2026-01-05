@@ -11,7 +11,6 @@ export const dynamic = 'force-dynamic';
 
 export default function HomePage() {
   const [categories, setCategories] = useState<any[]>([]);
-  const [totalQuestions, setTotalQuestions] = useState(0);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -21,7 +20,6 @@ export default function HomePage() {
         if (response.ok) {
           const data = await response.json() as { categories: any[], _globalTotalQuestions: number };
           setCategories(data.categories || []);
-          setTotalQuestions(data._globalTotalQuestions || 0);
         }
       } catch (error) {
         console.error('Error fetching categories:', error);
@@ -33,6 +31,8 @@ export default function HomePage() {
   }, []);
 
   const totalQuizzes = categories.reduce((sum, cat) => sum + cat.quizzes.length, 0);
+  // Nombre de questions codé en dur à 400
+  const totalQuestions = 400;
 
   if (loading) {
     return (
