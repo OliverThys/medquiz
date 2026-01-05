@@ -148,7 +148,7 @@ export default function HomePage() {
 
                       return (
                         <Link key={quiz.id} href={`/quiz/${quiz.id}`}>
-                          <Card hover className={`h-full ${isComprehensiveQuiz ? 'bg-gradient-to-br from-orange-50 to-white border-orange-200' : ''}`}>
+                          <Card hover className={`h-full ${isComprehensiveQuiz ? 'border-orange-500 border-2' : ''}`}>
                             <CardContent className="py-5">
                             <div className="flex items-start justify-between mb-3">
                               <h3 className="font-semibold text-stone-50 line-clamp-2 flex-1">
