@@ -66,7 +66,7 @@ export default function CategoryQuizPage({ params }: { params: Promise<{ id: str
         const resolvedParams = await params;
         const response = await fetch(`/api/quiz/category/${resolvedParams.id}`);
         if (response.ok) {
-          const data = await response.json();
+          const data = await response.json() as Quiz;
 
           // Mélanger les questions et les réponses
           const shuffledQuestions = shuffleArray(data.questions as Question[]);

@@ -54,7 +54,7 @@ export default function QuizPage({ params }: { params: Promise<{ id: string }> }
         const resolvedParams = await params;
         const response = await fetch(`/api/quiz/${resolvedParams.id}`);
         if (response.ok) {
-          const data = await response.json();
+          const data = await response.json() as Quiz;
           setQuiz(data);
         }
       } catch (error) {
