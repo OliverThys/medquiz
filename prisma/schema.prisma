@@ -1,0 +1,133 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String
+  password  String
+  role      String   @default("student")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  quizAttempts QuizAttempt[]
+  progress     UserProgress?
+
+  @@map("users")
+}
+
+model Category {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  color       String   @default("#FF6B35")
+  icon        String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  quizzes Quiz[]
+
+  @@map("categories")
+}
+
+model Quiz {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  categoryId  String
+  difficulty  String   @default("medium")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  category      Category      @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  questions     Question[]
+  quizAttempts  QuizAttempt[]
+
+  @@map("quizzes")
+}
+
+model Question {
+  id          String   @id @default(cuid())
+  quizId      String
+  questionText String
+  explanation String?
+  order       Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  quiz        Quiz         @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  answers     Answer[]
+  userAnswers UserAnswer[]
+
+  @@map("questions")
+}
+
+model Answer {
+  id         String   @id @default(cuid())
+  questionId String
+  answerText String
+  isCorrect  Boolean  @default(false)
+  order      Int
+  createdAt  DateTime @default(now())
+
+  question     Question      @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  userAnswers  UserAnswer[]
+
+  @@map("answers")
+}
+
+model QuizAttempt {
+  id            String   @id @default(cuid())
+  userId        String
+  quizId        String
+  score         Int
+  totalQuestions Int
+  completedAt   DateTime @default(now())
+
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  quiz        Quiz        @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  userAnswers UserAnswer[]
+
+  @@map("quiz_attempts")
+}
+
+model UserAnswer {
+  id        String   @id @default(cuid())
+  attemptId String
+  questionId String
+  answerId   String?
+  isCorrect  Boolean
+  createdAt  DateTime @default(now())
+
+  attempt  QuizAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  question Question    @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  answer   Answer?     @relation(fields: [answerId], references: [id], onDelete: Cascade)
+
+  @@map("user_answers")
+}
+
+model UserProgress {
+  id            String   @id @default(cuid())
+  userId        String   @unique
+  totalQuizzes  Int      @default(0)
+  totalQuestions Int     @default(0)
+  correctAnswers Int     @default(0)
+  streak        Int      @default(0)
+  lastActiveDate DateTime @default(now())
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("user_progress")
+}
+
