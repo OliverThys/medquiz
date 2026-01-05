@@ -163,7 +163,7 @@ export default function QuizPage({ params }: { params: Promise<{ id: string }> }
           <Card className="animate-scale-in">
             <CardContent className="py-8">
               <div className="text-center mb-8">
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-orange-100 flex items-center justify-center border-4 border-orange-500 shadow-lg">
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-orange-100 flex items-center justify-center border-4 border-orange-500">
                   <span className="text-4xl font-bold text-orange-600">{percentage}%</span>
                 </div>
                 <h2 className="text-2xl font-bold text-stone-900 mb-2">Quiz terminé !</h2>
@@ -205,7 +205,7 @@ export default function QuizPage({ params }: { params: Promise<{ id: string }> }
                             Question {index + 1}: {question.questionText}
                           </p>
                           {question.explanation && (
-                            <p className="text-sm text-stone-700 bg-stone-100 p-3 rounded-lg border border-stone-200">
+                            <p className="text-sm text-stone-700 bg-white p-3 rounded-lg border border-stone-200">
                               {question.explanation}
                             </p>
                           )}
@@ -295,12 +295,12 @@ export default function QuizPage({ params }: { params: Promise<{ id: string }> }
                     disabled={isValidated}
                     className={`w-full text-left p-3 sm:p-4 rounded-lg border-2 transition-all ${
                       showCorrect
-                        ? 'border-green-500 bg-green-50 shadow-sm'
+                        ? 'border-green-500 bg-green-50'
                         : showIncorrect
-                        ? 'border-red-500 bg-red-50 shadow-sm'
+                        ? 'border-red-500 bg-red-50'
                         : isSelected
-                        ? 'border-orange-500 bg-orange-50 shadow-sm'
-                        : 'border-stone-300 hover:border-orange-500 bg-white shadow-sm hover:shadow-md'
+                        ? 'border-orange-500 bg-orange-50'
+                        : 'border-stone-200 hover:border-orange-500 bg-white'
                     } ${isValidated ? 'cursor-default' : 'cursor-pointer'}`}
                   >
                     <div className="flex items-center gap-3">

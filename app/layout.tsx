@@ -46,7 +46,7 @@ export default function RootLayout({
           }}
         />
       </head> */}
-      <body className="bg-neutral-50 text-neutral-900 transition-colors">
+      <body className="bg-stone-100 text-stone-900 transition-colors">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

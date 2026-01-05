@@ -119,7 +119,7 @@ export default function HomePage() {
                   {/* Category Header - Clickable */}
                   <button
                     onClick={() => toggleCategory(category.id)}
-                    className="w-full flex items-center justify-between gap-3 p-4 rounded-xl bg-white hover:bg-stone-50 transition-colors border border-stone-300 hover:border-stone-400 group shadow-md"
+                    className="w-full flex items-center justify-between gap-3 p-4 rounded-xl bg-white hover:bg-stone-50 transition-colors border border-stone-200 hover:border-stone-300 group"
                   >
                     <div className="flex items-center gap-3 flex-1">
                       <div
