@@ -2,13 +2,13 @@ name = "medquiz"
 compatibility_date = "2024-01-01"
 pages_build_output_dir = ".next"
 
-[[d1_databases]]
+[env.production]
+name = "medquiz"
+
+[[env.production.d1_databases]]
 binding = "DB"
 database_name = "medquiz-db"
 database_id = "6a37a0cd-06cc-4a52-b4af-e831666e3ee5"
-
-[env.production]
-name = "medquiz"
 
 [env.production.vars]
 NODE_ENV = "production"
