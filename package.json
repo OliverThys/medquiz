@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && next build",
-    "pages:build": "prisma generate && npx @cloudflare/next-on-pages",
+    "build": "npx prisma generate && next build",
+    "pages:build": "npx prisma generate && npx @cloudflare/next-on-pages",
     "start": "next start",
     "lint": "next lint",
     "seed": "tsx prisma/seed.ts",
     "seed:nephro": "tsx prisma/seed-nephrologie.ts",
-    "postinstall": "prisma generate",
+    "postinstall": "npx prisma generate",
     "pages:install": "npm install --legacy-peer-deps"
   },
   "dependencies": {
