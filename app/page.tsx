@@ -31,8 +31,9 @@ export default function HomePage() {
   }, []);
 
   const totalQuizzes = categories.reduce((sum, cat) => sum + cat.quizzes.length, 0);
+  // Use the total unique questions per category to avoid double counting
   const totalQuestions = categories.reduce(
-    (sum, cat) => sum + cat.quizzes.reduce((qSum: number, quiz: any) => qSum + (quiz._count?.questions || 0), 0),
+    (sum, cat: any) => sum + (cat._totalQuestions || 0),
     0
   );
 

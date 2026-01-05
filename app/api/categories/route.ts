@@ -42,9 +42,18 @@ export async function GET(request: Request) {
           })
         );
 
+        // Get total unique questions count for this category (to avoid double counting)
+        const totalQuestionsResult = await DB.prepare(
+          `SELECT COUNT(DISTINCT q.id) as count 
+           FROM questions q 
+           INNER JOIN quizzes qu ON q.quizId = qu.id 
+           WHERE qu.categoryId = ?`
+        ).bind(category.id).first();
+
         return {
           ...category,
           quizzes,
+          _totalQuestions: totalQuestionsResult?.count || 0,
         };
       })
     );

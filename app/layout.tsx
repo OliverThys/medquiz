@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${inter.variable} ${caveat.variable}`} suppressHydrationWarning>
-      <body>
+      <body className="bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-50">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
