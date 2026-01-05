@@ -127,9 +127,24 @@ export default function HomePage() {
                 {/* Quizzes Grid */}
                 {category.quizzes.length > 0 ? (
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {category.quizzes.map((quiz: any) => {
+                    {[...category.quizzes].sort((a: any, b: any) => {
+                      // Mettre le quiz "test complet 400 questions" en premier
+                      const aIsComprehensive = a.title.toLowerCase().includes('toutes les questions') ||
+                                              a.title.toLowerCase().includes('mélangées') ||
+                                              a.title.toLowerCase().includes('400') ||
+                                              a.title.toLowerCase().includes('test complet');
+                      const bIsComprehensive = b.title.toLowerCase().includes('toutes les questions') ||
+                                              b.title.toLowerCase().includes('mélangées') ||
+                                              b.title.toLowerCase().includes('400') ||
+                                              b.title.toLowerCase().includes('test complet');
+                      if (aIsComprehensive && !bIsComprehensive) return -1;
+                      if (!aIsComprehensive && bIsComprehensive) return 1;
+                      return 0;
+                    }).map((quiz: any) => {
                       const isComprehensiveQuiz = quiz.title.toLowerCase().includes('toutes les questions') ||
-                                                  quiz.title.toLowerCase().includes('mélangées');
+                                                  quiz.title.toLowerCase().includes('mélangées') ||
+                                                  quiz.title.toLowerCase().includes('400') ||
+                                                  quiz.title.toLowerCase().includes('test complet');
 
                       return (
                         <Link key={quiz.id} href={`/quiz/${quiz.id}`}>

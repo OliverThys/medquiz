@@ -42,8 +42,8 @@ export function Header() {
               href="/"
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 pathname === '/'
-                  ? 'bg-orange-50 text-orange-600
-                  : 'text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50
+                  ? 'bg-orange-50 text-orange-600'
+                  : 'text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50'
               }`}
             >
               Accueil
@@ -52,8 +52,8 @@ export function Header() {
               href="/admin"
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 pathname?.startsWith('/admin')
-                  ? 'bg-orange-50 text-orange-600
-                  : 'text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50
+                  ? 'bg-orange-50 text-orange-600'
+                  : 'text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50'
               }`}
             >
               Administration
