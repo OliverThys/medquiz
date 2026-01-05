@@ -21,7 +21,7 @@ export function Header() {
                 Med<span className="text-orange-500">Quiz</span>
               </span>
               <span className="text-lg text-neutral-500 italic flex items-center gap-2.5" style={{ fontFamily: "var(--font-handwriting)" }}>
-                <span className="text-lg font-medium">pour Manon</span>
+                <span className="text-lg font-medium">pour Manon et Elisa</span>
                 <svg
                   className="w-5 h-5 text-orange-500 animate-pulse"
                   fill="currentColor"

@@ -1,0 +1,79 @@
+{
+  "questions": [
+    {
+      "id": "E001",
+      "questionText": "Question exemple 1 - À remplacer avec le contenu du cours d'Elisa",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Réponse A",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Réponse B",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Réponse C",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Réponse D",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Explication détaillée de la réponse correcte",
+      "sourceReference": "Cours d'Elisa - Page XX"
+    },
+    {
+      "id": "E002",
+      "questionText": "Question exemple 2 - À remplacer avec le contenu du cours d'Elisa",
+      "difficulty": "easy",
+      "answers": [
+        {
+          "answerText": "Réponse A",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Réponse B",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Réponse C",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Réponse D",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Explication détaillée de la réponse correcte",
+      "sourceReference": "Cours d'Elisa - Page XX"
+    },
+    {
+      "id": "E003",
+      "questionText": "Question exemple 3 - À remplacer avec le contenu du cours d'Elisa",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "Réponse A",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Réponse B",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Réponse C",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Réponse D",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Explication détaillée de la réponse correcte",
+      "sourceReference": "Cours d'Elisa - Page XX"
+    }
+  ]
+}
