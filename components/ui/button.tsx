@@ -18,7 +18,7 @@ export function Button({
 
   const variantClasses = {
     primary: 'bg-orange-500 text-white hover:bg-orange-600 shadow-sm hover:shadow-md',
-    secondary: 'bg-stone-100 text-stone-100 hover:bg-stone-200',
+    secondary: 'bg-stone-100 text-stone-50 hover:bg-stone-200',
     outline: 'border-2 border-orange-500 text-orange-600 hover:bg-orange-50',
     ghost: 'text-stone-700 hover:bg-stone-100',
   };

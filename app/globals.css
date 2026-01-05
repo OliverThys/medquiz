@@ -5,9 +5,9 @@ html {
 }
 
 body {
-  @apply bg-stone-800 text-stone-100;
-  background-color: #292524;
-  color: #e7e5e4;
+  @apply bg-stone-700 text-stone-50;
+  background-color: #44403c;
+  color: #fafaf9;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--font-sans);
@@ -21,7 +21,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #1c1917;
+  background-color: #292524;
 }
 
 ::-webkit-scrollbar-thumb {

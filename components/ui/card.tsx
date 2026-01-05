@@ -14,7 +14,7 @@ export function Card({ children, hover = false, className = '', onClick }: CardP
 
   return (
     <div
-      className={`bg-stone-900 rounded-xl border border-stone-700 shadow-sm ${hoverClasses} ${className}`}
+      className={`bg-stone-600 rounded-xl border border-stone-500 shadow-sm ${hoverClasses} ${className}`}
       onClick={onClick}
     >
       {children}
@@ -35,6 +35,6 @@ export function CardContent({ children, className = '' }: { children: React.Reac
 }
 
 export function CardTitle({ children, className = '' }: { children: React.ReactNode; className?: string }) {
-  return <h3 className={`text-lg font-semibold text-stone-100 ${className}`}>{children}</h3>;
+  return <h3 className={`text-lg font-semibold text-stone-50 ${className}`}>{children}</h3>;
 }
 
