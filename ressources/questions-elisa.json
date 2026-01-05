@@ -2,78 +2,1753 @@
   "questions": [
     {
       "id": "E001",
-      "questionText": "Question exemple 1 - À remplacer avec le contenu du cours d'Elisa",
-      "difficulty": "medium",
-      "answers": [
-        {
-          "answerText": "Réponse A",
-          "isCorrect": true
-        },
-        {
-          "answerText": "Réponse B",
-          "isCorrect": false
-        },
-        {
-          "answerText": "Réponse C",
-          "isCorrect": false
-        },
-        {
-          "answerText": "Réponse D",
-          "isCorrect": false
-        }
-      ],
-      "explanation": "Explication détaillée de la réponse correcte",
-      "sourceReference": "Cours d'Elisa - Page XX"
-    },
-    {
-      "id": "E002",
-      "questionText": "Question exemple 2 - À remplacer avec le contenu du cours d'Elisa",
+      "questionText": "Selon l'étymologie, que signifie 'informer' ?",
       "difficulty": "easy",
       "answers": [
         {
-          "answerText": "Réponse A",
-          "isCorrect": false
-        },
-        {
-          "answerText": "Réponse B",
+          "answerText": "Mettre en forme et transmettre",
           "isCorrect": true
         },
         {
-          "answerText": "Réponse C",
+          "answerText": "Mettre en relation",
           "isCorrect": false
         },
         {
-          "answerText": "Réponse D",
+          "answerText": "Créer du sens",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Partager des émotions",
           "isCorrect": false
         }
       ],
-      "explanation": "Explication détaillée de la réponse correcte",
-      "sourceReference": "Cours d'Elisa - Page XX"
+      "explanation": "Le terme 'informer' vient du latin 'informare' qui signifie donner une forme, façonner. Il implique donc la mise en forme et la transmission d'un contenu.",
+      "sourceReference": "Cours d'Elisa - Introduction, étymologie"
+    },
+    {
+      "id": "E002",
+      "questionText": "Quelle est la métaphore utilisée par Yves Winkin pour représenter les approches mécanistes ?",
+      "difficulty": "easy",
+      "answers": [
+        {
+          "answerText": "Le télégraphe",
+          "isCorrect": true
+        },
+        {
+          "answerText": "L'orchestre",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Le corps humain",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Le réseau",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Yves Winkin utilise la métaphore du télégraphe pour représenter les approches mécanistes, qui voient la communication comme une transmission linéaire d'information d'un point A à un point B.",
+      "sourceReference": "Cours d'Elisa - Introduction, métaphores Winkin"
     },
     {
       "id": "E003",
-      "questionText": "Question exemple 3 - À remplacer avec le contenu du cours d'Elisa",
-      "difficulty": "hard",
+      "questionText": "Quelles sont les trois caractéristiques des approches mécanistes ?",
+      "difficulty": "medium",
       "answers": [
         {
-          "answerText": "Réponse A",
-          "isCorrect": false
-        },
-        {
-          "answerText": "Réponse B",
-          "isCorrect": false
-        },
-        {
-          "answerText": "Réponse C",
+          "answerText": "Atomistique, linéaire, séquentiel",
           "isCorrect": true
         },
         {
-          "answerText": "Réponse D",
+          "answerText": "Complexe, interactif, systémique",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Relationnel, contextuel, émotionnel",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Digital, analogique, performatif",
           "isCorrect": false
         }
       ],
-      "explanation": "Explication détaillée de la réponse correcte",
-      "sourceReference": "Cours d'Elisa - Page XX"
+      "explanation": "Les approches mécanistes sont caractérisées par leur vision atomistique (éléments séparés), linéaire (transmission A→B) et séquentielle (étapes successives).",
+      "sourceReference": "Cours d'Elisa - Approches mécanistes"
+    },
+    {
+      "id": "E004",
+      "questionText": "Quelle est la métaphore utilisée pour représenter les approches organistes ?",
+      "difficulty": "easy",
+      "answers": [
+        {
+          "answerText": "L'orchestre",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Le télégraphe",
+          "isCorrect": false
+        },
+        {
+          "answerText": "La machine",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Le code",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "L'orchestre est la métaphore utilisée par Winkin pour représenter les approches organistes, où tous les éléments interagissent en temps réel et créent ensemble une unité.",
+      "sourceReference": "Cours d'Elisa - Approches organistes"
+    },
+    {
+      "id": "E005",
+      "questionText": "Quelles sont les trois caractéristiques des approches organistes ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Complexe, interactif, systémique",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Atomistique, linéaire, séquentiel",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Digital, analogique, performatif",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Dénotatif, connotatif, métaphorique",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Les approches organistes sont caractérisées par leur vision complexe (multiples dimensions interconnectées), interactive (ajustements constants) et systémique (importance du contexte et du tout).",
+      "sourceReference": "Cours d'Elisa - Approches organistes"
+    },
+    {
+      "id": "E006",
+      "questionText": "En quelle année Claude Shannon a-t-il publié sa théorie mathématique de l'information ?",
+      "difficulty": "easy",
+      "answers": [
+        {
+          "answerText": "1948",
+          "isCorrect": true
+        },
+        {
+          "answerText": "1945",
+          "isCorrect": false
+        },
+        {
+          "answerText": "1950",
+          "isCorrect": false
+        },
+        {
+          "answerText": "1963",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Claude Shannon a publié 'A Mathematical Theory of Communication' en 1948 dans le Bell System Technical Journal, révolutionnant l'étude de la communication.",
+      "sourceReference": "Cours d'Elisa - Théorie mathématique de l'information"
+    },
+    {
+      "id": "E007",
+      "questionText": "Dans le schéma de Shannon, qu'est-ce que le 'bruit' ?",
+      "difficulty": "easy",
+      "answers": [
+        {
+          "answerText": "Des perturbations aléatoires qui peuvent corrompre le message",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Le volume sonore du message",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Le contexte social de la communication",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Les émotions du récepteur",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Dans le modèle de Shannon, le bruit désigne toute perturbation aléatoire qui peut altérer le signal pendant sa transmission, menaçant l'intégrité de l'information.",
+      "sourceReference": "Cours d'Elisa - Schéma de Shannon"
+    },
+    {
+      "id": "E008",
+      "questionText": "Qu'est-ce qu'un bit selon Shannon ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "L'unité de mesure de l'information, valeur d'un signe de probabilité 1/2",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Un signal électrique",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Un code de transmission",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Une unité de temps",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Le bit est l'unité de mesure de l'information selon Shannon. C'est l'information nécessaire pour lever l'incertitude devant une alternative à deux solutions équiprobables (comme pile ou face).",
+      "sourceReference": "Cours d'Elisa - Le bit"
+    },
+    {
+      "id": "E009",
+      "questionText": "Comment lutter contre le bruit selon Shannon ?",
+      "difficulty": "easy",
+      "answers": [
+        {
+          "answerText": "Par la redondance",
+          "isCorrect": true
+        },
+        {
+          "answerText": "En augmentant le volume",
+          "isCorrect": false
+        },
+        {
+          "answerText": "En simplifiant le message",
+          "isCorrect": false
+        },
+        {
+          "answerText": "En utilisant plusieurs canaux",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Shannon propose d'utiliser la redondance, c'est-à-dire répéter des fragments du signal pour le rendre plus résistant au bruit. Exemple : le bit de parité ou l'alphabet phonétique de l'OTAN.",
+      "sourceReference": "Cours d'Elisa - Bruit et redondance"
+    },
+    {
+      "id": "E010",
+      "questionText": "Quelle est la principale limite de la théorie de Shannon ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Elle ne s'intéresse pas au sens du message, seulement à sa transmission",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Elle est trop complexe",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Elle ne fonctionne que pour les machines",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Elle ignore le bruit",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "La théorie de Shannon se concentre uniquement sur la transmission technique du signal sans s'intéresser au sens, aux effets, aux émotions ou à l'interprétation. C'est une vision d'ingénieur.",
+      "sourceReference": "Cours d'Elisa - Forces et limites de Shannon"
+    },
+    {
+      "id": "E011",
+      "questionText": "Quelles sont les trois fonctions principales des médias selon Harold Lasswell ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Surveillance de l'environnement, mise en relation des composantes de la société, transmission de l'héritage social",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Informer, éduquer, divertir",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Transmettre, recevoir, interpréter",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Contrôler, manipuler, persuader",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Selon Lasswell, les médias remplissent trois fonctions : surveiller l'environnement contre les menaces, coordonner la société pour répondre aux menaces, et transmettre les valeurs d'une génération à l'autre.",
+      "sourceReference": "Cours d'Elisa - Lasswell, 3 fonctions"
+    },
+    {
+      "id": "E012",
+      "questionText": "Quel est le modèle célèbre de Lasswell connu sous le nom des '5W' ?",
+      "difficulty": "easy",
+      "answers": [
+        {
+          "answerText": "Who says what to whom in which channel with what effect",
+          "isCorrect": true
+        },
+        {
+          "answerText": "What, when, where, why, who",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Write, watch, work, wonder, win",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Words, wisdom, world, web, work",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Le modèle des 5W de Lasswell analyse la communication selon 5 questions : Qui dit quoi à qui par quel moyen avec quels effets. C'est devenu LA formule pour analyser la communication.",
+      "sourceReference": "Cours d'Elisa - Les 5W de Lasswell"
+    },
+    {
+      "id": "E013",
+      "questionText": "Qu'est-ce que l'industrie culturelle selon l'École de Francfort ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "La production de masse de produits culturels selon une logique industrielle qui uniformise et diffuse l'idéologie capitaliste",
+          "isCorrect": true
+        },
+        {
+          "answerText": "L'industrie du divertissement",
+          "isCorrect": false
+        },
+        {
+          "answerText": "La création artistique moderne",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Les médias de masse",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Adorno et Horkheimer proposent que les produits culturels sont produits en masse comme des voitures dans une usine, créant une uniformisation et diffusant l'idéologie capitaliste dominante.",
+      "sourceReference": "Cours d'Elisa - École de Francfort, industrie culturelle"
+    },
+    {
+      "id": "E014",
+      "questionText": "Quelle est la théorie de l'exposition sélective selon Lazarsfeld ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Les individus sélectionnent les messages médiatiques en fonction de leurs opinions préexistantes",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Les médias sélectionnent ce qu'ils diffusent",
+          "isCorrect": false
+        },
+        {
+          "answerText": "On ne peut pas tout voir, il faut choisir",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Les messages sont sélectionnés par les algorithmes",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Lazarsfeld découvre que les gens ne consomment pas tous les messages disponibles, mais sélectionnent ceux qui confirment leurs opinions préexistantes, ce qui limite l'influence des médias.",
+      "sourceReference": "Cours d'Elisa - Exposition sélective, Lazarsfeld"
+    },
+    {
+      "id": "E015",
+      "questionText": "Qu'est-ce que le 'two-step flow' selon Katz et Lazarsfeld ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "L'information passe des médias aux leaders d'opinion, puis des leaders d'opinion au reste du groupe",
+          "isCorrect": true
+        },
+        {
+          "answerText": "La communication en deux étapes : émetteur puis récepteur",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Deux canaux de transmission parallèles",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Un modèle de communication bidirectionnel",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Le two-step flow montre que l'influence des médias passe par deux étapes : d'abord les médias influencent les leaders d'opinion, puis ces leaders influencent leur groupe social par des relations interpersonnelles.",
+      "sourceReference": "Cours d'Elisa - Two-step flow, Katz et Lazarsfeld"
+    },
+    {
+      "id": "E016",
+      "questionText": "Qu'est-ce que le gatekeeping (gardien de porte) ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Le rôle des journalistes qui décident quelles informations accèdent à la sphère publique",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Le contrôle des accès à Internet",
+          "isCorrect": false
+        },
+        {
+          "answerText": "La protection des sources journalistiques",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Le filtrage des messages publicitaires",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Le gatekeeping désigne le rôle des journalistes comme intermédiaires qui gèrent l'accès de certaines informations à la sphère publique par la médiatisation, décidant ce qui entre dans les espaces médiatiques limités.",
+      "sourceReference": "Cours d'Elisa - Gatekeeping"
+    },
+    {
+      "id": "E017",
+      "questionText": "Qu'est-ce que la fonction d'agenda (agenda-setting) ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Les médias ne disent pas QUOI penser, mais À QUOI penser",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Les médias dictent les opinions",
+          "isCorrect": false
+        },
+        {
+          "answerText": "L'organisation des programmes télévisés",
+          "isCorrect": false
+        },
+        {
+          "answerText": "La planification des campagnes médiatiques",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "La fonction d'agenda selon McCombs et Shaw montre que les médias définissent l'ordre du jour en choisissant les sujets traités et la place qui leur est accordée, influençant ce à quoi le public pense plutôt que ce qu'il pense.",
+      "sourceReference": "Cours d'Elisa - Fonction d'agenda"
+    },
+    {
+      "id": "E018",
+      "questionText": "Qu'est-ce que la spirale du silence selon Noelle-Neumann ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "Un individu qui n'ose pas exprimer une opinion minoritaire participe par son silence au renforcement de l'opinion majoritaire",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Le silence des médias sur certains sujets",
+          "isCorrect": false
+        },
+        {
+          "answerText": "L'absence de communication",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Le refus de répondre aux questions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "La spirale du silence décrit comment la peur de l'isolement social pousse les gens à se taire quand ils ont une opinion minoritaire, ce qui renforce l'impression que l'opinion majoritaire est encore plus majoritaire qu'elle ne l'est vraiment.",
+      "sourceReference": "Cours d'Elisa - Spirale du silence"
+    },
+    {
+      "id": "E019",
+      "questionText": "Qu'est-ce que la théorie des 'uses and gratifications' ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Une théorie qui s'intéresse à ce que les gens font AVEC les médias plutôt que ce que les médias font aux gens",
+          "isCorrect": true
+        },
+        {
+          "answerText": "L'utilisation gratuite des médias",
+          "isCorrect": false
+        },
+        {
+          "answerText": "La satisfaction des besoins des médias",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Les usages commerciaux des médias",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "La théorie des usages et satisfactions retourne la question fonctionnaliste : au lieu de demander 'qu'est-ce que les médias font aux gens', on demande 'qu'est-ce que les gens font avec les médias' et quels besoins ils satisfont.",
+      "sourceReference": "Cours d'Elisa - Uses and gratifications"
+    },
+    {
+      "id": "E020",
+      "questionText": "Quelle distinction fondamentale fait Saussure dans la linguistique ?",
+      "difficulty": "easy",
+      "answers": [
+        {
+          "answerText": "La distinction entre langue (système social) et parole (usage individuel)",
+          "isCorrect": true
+        },
+        {
+          "answerText": "La distinction entre signifiant et signifié",
+          "isCorrect": false
+        },
+        {
+          "answerText": "La distinction entre communication verbale et non-verbale",
+          "isCorrect": false
+        },
+        {
+          "answerText": "La distinction entre dénotation et connotation",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Saussure distingue la langue (système social, abstrait, collectif) de la parole (usage individuel, concret, personnel). La langue existe avant nous, la parole est notre utilisation créative de la langue.",
+      "sourceReference": "Cours d'Elisa - Saussure, langue et parole"
+    },
+    {
+      "id": "E021",
+      "questionText": "Qu'est-ce que l'arbitraire du signe selon Saussure ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Il n'y a pas de lien naturel entre le signifiant (son) et le signifié (concept), c'est une convention sociale",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Le signe peut signifier n'importe quoi",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Le signe est choisi au hasard",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Le signe n'a pas de sens",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "L'arbitraire du signe signifie qu'il n'existe aucun lien naturel, logique ou objectif entre le son (signifiant) et le concept (signifié). C'est une pure convention sociale. Exemple : 'chien', 'dog', 'inu' désignent tous le même animal.",
+      "sourceReference": "Cours d'Elisa - Saussure, arbitraire du signe"
+    },
+    {
+      "id": "E022",
+      "questionText": "Combien de fonctions linguistiques Jakobson identifie-t-il dans son schéma de communication ?",
+      "difficulty": "easy",
+      "answers": [
+        {
+          "answerText": "6 fonctions",
+          "isCorrect": true
+        },
+        {
+          "answerText": "3 fonctions",
+          "isCorrect": false
+        },
+        {
+          "answerText": "5 fonctions",
+          "isCorrect": false
+        },
+        {
+          "answerText": "4 fonctions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Jakobson identifie 6 fonctions linguistiques : expressive (destinateur), conative (destinataire), référentielle (contexte), poétique (message), phatique (contact), et métalinguistique (code).",
+      "sourceReference": "Cours d'Elisa - Jakobson, 6 fonctions"
+    },
+    {
+      "id": "E023",
+      "questionText": "Quelle est la fonction phatique selon Jakobson ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Établir et maintenir une relation, attirer l'attention",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Exprimer des émotions",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Transmettre de l'information",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Agir sur le destinataire",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "La fonction phatique sert à établir et maintenir le contact, attirer l'attention. Exemple : 'Allô? Comment ça va? Quel temps!' - ces phrases servent surtout à maintenir le contact, pas à transmettre de l'information.",
+      "sourceReference": "Cours d'Elisa - Jakobson, fonction phatique"
+    },
+    {
+      "id": "E024",
+      "questionText": "Quelle distinction propose Roland Barthes dans son analyse sémiologique ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Dénotation (sens littéral) et connotation (sens culturel, émotionnel)",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Signifiant et signifié",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Langue et parole",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Digital et analogique",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Barthes distingue la dénotation (sens littéral, objectif, partagé par tous) de la connotation (sens second, culturel, émotionnel, variable). C'est à travers l'analyse des connotations qu'il débusque les 'mythologies'.",
+      "sourceReference": "Cours d'Elisa - Barthes, dénotation/connotation"
+    },
+    {
+      "id": "E025",
+      "questionText": "Qu'est-ce qu'une 'mythologie' selon Barthes ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "Les significations secondes, les mythes culturels qui se cachent derrière les objets quotidiens et naturalisent certaines idéologies",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Les légendes anciennes",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Les fausses informations",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Les histoires fictives",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Les mythologies barthésiennes sont les significations secondes, les mythes culturels qui se cachent derrière les objets quotidiens (publicités, images, produits) et qui naturalisent certaines idéologies sans qu'on s'en rende compte.",
+      "sourceReference": "Cours d'Elisa - Barthes, mythologies"
+    },
+    {
+      "id": "E026",
+      "questionText": "Combien de fonctions narratives Propp identifie-t-il dans les contes merveilleux ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "31 fonctions",
+          "isCorrect": true
+        },
+        {
+          "answerText": "7 fonctions",
+          "isCorrect": false
+        },
+        {
+          "answerText": "12 fonctions",
+          "isCorrect": false
+        },
+        {
+          "answerText": "6 fonctions",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Propp a identifié 31 fonctions narratives dans son analyse des contes merveilleux russes. Ces fonctions se succèdent toujours dans le même ordre, bien que certaines puissent être absentes.",
+      "sourceReference": "Cours d'Elisa - Propp, 31 fonctions"
+    },
+    {
+      "id": "E027",
+      "questionText": "Combien de rôles types (actants) Propp identifie-t-il dans les contes ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "7 rôles types",
+          "isCorrect": true
+        },
+        {
+          "answerText": "5 rôles types",
+          "isCorrect": false
+        },
+        {
+          "answerText": "6 rôles types",
+          "isCorrect": false
+        },
+        {
+          "answerText": "8 rôles types",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Propp identifie 7 types de personnages (rôles/actants) : agresseur, donateur, auxiliaire magique, objet de quête, mandateur, héros, et faux héros.",
+      "sourceReference": "Cours d'Elisa - Propp, 7 rôles types"
+    },
+    {
+      "id": "E028",
+      "questionText": "Combien d'actants Greimas identifie-t-il dans son schéma actantiel ?",
+      "difficulty": "easy",
+      "answers": [
+        {
+          "answerText": "6 actants",
+          "isCorrect": true
+        },
+        {
+          "answerText": "7 actants",
+          "isCorrect": false
+        },
+        {
+          "answerText": "5 actants",
+          "isCorrect": false
+        },
+        {
+          "answerText": "4 actants",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Greimas simplifie le modèle de Propp en identifiant 6 actants : destinateur, destinataire, sujet (héros), objet, adjuvant, et opposant.",
+      "sourceReference": "Cours d'Elisa - Greimas, schéma actantiel"
+    },
+    {
+      "id": "E029",
+      "questionText": "Quel est le concept clé d'Umberto Eco dans 'Lector in fabula' ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "La coopération interprétative : le lecteur participe activement à la construction du sens",
+          "isCorrect": true
+        },
+        {
+          "answerText": "L'auteur contrôle totalement le sens",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Le texte a un sens fixe et unique",
+          "isCorrect": false
+        },
+        {
+          "answerText": "La lecture est un décodage mécanique",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Eco propose que le texte est un 'mécanisme paresseux' qui exige du lecteur un travail coopératif acharné pour remplir les espaces non-dits. Le lecteur participe activement à la construction du sens.",
+      "sourceReference": "Cours d'Elisa - Eco, Lector in fabula"
+    },
+    {
+      "id": "E030",
+      "questionText": "Qu'est-ce que le 'lecteur modèle' selon Eco ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "Le lecteur idéal que l'auteur imagine en écrivant, capable d'interpréter le texte de la manière voulue",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Un lecteur parfait qui comprend tout",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Le lecteur moyen",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Un lecteur expert",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Le lecteur modèle est une construction théorique : c'est le lecteur idéal que l'auteur prévoit en écrivant, qui possède les compétences culturelles nécessaires pour faire les inférences attendues.",
+      "sourceReference": "Cours d'Elisa - Eco, lecteur modèle"
+    },
+    {
+      "id": "E031",
+      "questionText": "Quel est le premier axiome de l'École de Palo Alto ?",
+      "difficulty": "easy",
+      "answers": [
+        {
+          "answerText": "On ne peut pas ne pas communiquer",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Toute communication a un sens",
+          "isCorrect": false
+        },
+        {
+          "answerText": "La communication est linéaire",
+          "isCorrect": false
+        },
+        {
+          "answerText": "On communique seulement avec des mots",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Le premier axiome de Palo Alto énonce qu'on ne peut pas ne pas communiquer : tout comportement (activité ou absence d'activité, parole ou silence) a une valeur de message dans une interaction.",
+      "sourceReference": "Cours d'Elisa - Palo Alto, axiome 1"
+    },
+    {
+      "id": "E032",
+      "questionText": "Quel est le deuxième axiome de Palo Alto concernant la communication ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Toute communication présente deux aspects : le contenu et la relation, tel que le second englobe le premier",
+          "isCorrect": true
+        },
+        {
+          "answerText": "La communication est toujours verbale",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Le contenu est plus important que la relation",
+          "isCorrect": false
+        },
+        {
+          "answerText": "La relation est indépendante du contenu",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Le deuxième axiome distingue le contenu (ce qui est dit) et la relation (comment c'est dit, dans quel contexte relationnel). La relation est une métacommunication qui englobe le contenu et change complètement le sens.",
+      "sourceReference": "Cours d'Elisa - Palo Alto, axiome 2"
+    },
+    {
+      "id": "E033",
+      "questionText": "Qu'est-ce que la 'ponctuation' selon le troisième axiome de Palo Alto ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "La manière dont chaque acteur découpe et interprète le flux de communication circulaire",
+          "isCorrect": true
+        },
+        {
+          "answerText": "L'utilisation de la ponctuation dans les phrases",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Les pauses dans la conversation",
+          "isCorrect": false
+        },
+        {
+          "answerText": "La fin d'une communication",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "La ponctuation désigne comment chaque personne 'découpe' l'interaction circulaire pour se raconter l'histoire. Chacun pense que l'origine de son comportement est due au comportement de l'autre, ce qui peut mener à des conflits.",
+      "sourceReference": "Cours d'Elisa - Palo Alto, axiome 3"
+    },
+    {
+      "id": "E034",
+      "questionText": "Quels sont les deux modes de communication selon le quatrième axiome de Palo Alto ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Digital (convention) et analogique (ressemblance)",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Verbal et non-verbal",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Oral et écrit",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Formel et informel",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Le quatrième axiome distingue la communication digitale (basée sur des conventions, comme les mots) et analogique (basée sur la ressemblance, comme les gestes). Le digital concerne le contenu, l'analogique la relation.",
+      "sourceReference": "Cours d'Elisa - Palo Alto, axiome 4"
+    },
+    {
+      "id": "E035",
+      "questionText": "Qu'est-ce qu'une interaction symétrique selon le cinquième axiome de Palo Alto ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Une interaction où les partenaires minimisent les différences et agissent en miroir, sur un pied d'égalité",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Une interaction où les messages se ressemblent",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Une interaction équilibrée",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Une interaction complémentaire",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Une interaction symétrique est fondée sur l'égalité : les partenaires minimisent les différences et agissent en miroir. Si l'un attaque, l'autre riposte de la même manière. Exemple : 'Œil pour œil, dent pour dent'.",
+      "sourceReference": "Cours d'Elisa - Palo Alto, axiome 5"
+    },
+    {
+      "id": "E036",
+      "questionText": "Qu'est-ce qu'une interaction complémentaire selon Palo Alto ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Une interaction où les partenaires maximisent les différences, avec des positions hiérarchiques différentes",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Une interaction où les messages se complètent",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Une interaction harmonieuse",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Une interaction symétrique",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Une interaction complémentaire est fondée sur la différence : les partenaires maximisent les différences, avec des positions hiérarchiques (l'un en haut, l'autre en bas). Exemple : prof/élève, juge/justiciable.",
+      "sourceReference": "Cours d'Elisa - Palo Alto, axiome 5"
+    },
+    {
+      "id": "E037",
+      "questionText": "Quelle distinction fait Benveniste entre 'histoire' et 'discours' ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "Le discours a des embrayeurs (je, tu, ici, maintenant) et crée une mise à distance, tandis que l'histoire n'a pas d'embrayeurs et crée une identification",
+          "isCorrect": true
+        },
+        {
+          "answerText": "L'histoire est vraie, le discours est faux",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Le discours est oral, l'histoire est écrite",
+          "isCorrect": false
+        },
+        {
+          "answerText": "L'histoire est narrative, le discours est argumentatif",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Benveniste distingue le discours (avec embrayeurs, on voit qui parle à qui, réception = mise à distance) et l'histoire/récit (sans embrayeurs, les faits semblent se raconter seuls, réception = identification).",
+      "sourceReference": "Cours d'Elisa - Benveniste, histoire/discours"
+    },
+    {
+      "id": "E038",
+      "questionText": "Qu'est-ce qu'un déictique ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Un mot dont le sens dépend directement de la situation d'énonciation (je, tu, ici, maintenant)",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Un mot technique",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Un mot dérivé du latin",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Un mot polysémique",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Les déictiques sont des mots dont le sens dépend de la situation d'énonciation : pronoms personnels (je, tu), adverbes spatiaux (ici, là), temporels (maintenant, demain), démonstratifs (ce, cette).",
+      "sourceReference": "Cours d'Elisa - Déictiques"
+    },
+    {
+      "id": "E039",
+      "questionText": "Qu'est-ce qu'un acte de langage selon Austin ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "Un énoncé qui ne décrit pas seulement un état des choses, mais accomplit une action en parlant",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Un énoncé performatif",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Un ordre",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Un énoncé constatif",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Austin montre que certains énoncés ne servent pas qu'à décrire, mais à agir : 'Je vous déclare mari et femme' crée le mariage en le disant. C'est un acte performatif, pas constatif.",
+      "sourceReference": "Cours d'Elisa - Austin, actes de langage"
+    },
+    {
+      "id": "E040",
+      "questionText": "Qu'est-ce qu'une métaphore conceptuelle selon Lakoff et Johnson ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "Une structure cognitive qui permet de comprendre un concept abstrait en termes d'un concept plus concret",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Une figure de style littéraire",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Une comparaison implicite",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Un symbole culturel",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Lakoff et Johnson montrent que les métaphores structurent notre pensée, pas seulement notre langage. Exemple : 'LE TEMPS C'EST DE L'ARGENT' - on comprend le temps (abstrait) en termes d'argent (concret).",
+      "sourceReference": "Cours d'Elisa - Lakoff et Johnson, métaphores conceptuelles"
+    },
+    {
+      "id": "E041",
+      "questionText": "Qu'est-ce que la kinésique selon Birdwhistell ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "L'étude systématique de la communication gestuelle non-verbale",
+          "isCorrect": true
+        },
+        {
+          "answerText": "L'étude du mouvement",
+          "isCorrect": false
+        },
+        {
+          "answerText": "L'étude de la voix",
+          "isCorrect": false
+        },
+        {
+          "answerText": "L'étude du langage",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Birdwhistell a développé la kinésique comme discipline étudiant les aspects visibles de la communication : gestes, postures, expressions faciales, mouvements corporels conscients et inconscients.",
+      "sourceReference": "Cours d'Elisa - Birdwhistell, kinésique"
+    },
+    {
+      "id": "E042",
+      "questionText": "Qu'est-ce que la proxémique selon Edward T. Hall ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "L'étude des distances physiques et symboliques entre les individus",
+          "isCorrect": true
+        },
+        {
+          "answerText": "L'étude de la proximité sociale",
+          "isCorrect": false
+        },
+        {
+          "answerText": "L'étude de l'espace urbain",
+          "isCorrect": false
+        },
+        {
+          "answerText": "L'étude de la communication de proximité",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Hall a développé la proxémique pour étudier comment les gens utilisent l'espace dans leurs interactions : distances interpersonnelles, organisation des espaces, signification symbolique de l'espace.",
+      "sourceReference": "Cours d'Elisa - Hall, proxémique"
+    },
+    {
+      "id": "E043",
+      "questionText": "Combien de zones proxémiques Hall identifie-t-il ?",
+      "difficulty": "easy",
+      "answers": [
+        {
+          "answerText": "4 zones (intime, personnel, social, public)",
+          "isCorrect": true
+        },
+        {
+          "answerText": "3 zones",
+          "isCorrect": false
+        },
+        {
+          "answerText": "5 zones",
+          "isCorrect": false
+        },
+        {
+          "answerText": "6 zones",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Hall identifie 4 zones proxémiques : intime (0-45 cm), personnel (45 cm-1,2 m), social (1,2-3,6 m), et public (plus de 3,6 m). Ces distances varient selon les cultures.",
+      "sourceReference": "Cours d'Elisa - Hall, 4 zones proxémiques"
+    },
+    {
+      "id": "E044",
+      "questionText": "Qu'est-ce que le transmédia storytelling selon Jenkins ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "Un processus où les éléments d'une fiction sont dispersés sur diverses plateformes médiatiques pour créer une expérience coordonnée, chaque médium apportant sa contribution unique",
+          "isCorrect": true
+        },
+        {
+          "answerText": "L'adaptation d'une histoire sur plusieurs médias",
+          "isCorrect": false
+        },
+        {
+          "answerText": "La diffusion d'un même contenu sur plusieurs plateformes",
+          "isCorrect": false
+        },
+        {
+          "answerText": "La création d'histoires interactives",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Le transmédia storytelling disperse les éléments narratifs sur plusieurs plateformes (film, série, jeu, site web, etc.), chaque plateforme apportant sa contribution unique pour créer une expérience globale coordonnée.",
+      "sourceReference": "Cours d'Elisa - Jenkins, transmédia storytelling"
+    },
+    {
+      "id": "E045",
+      "questionText": "Qu'est-ce qu'un 'pro-sumer' selon Jenkins ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Un consommateur qui devient aussi producteur de contenu (producteur + consommateur)",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Un professionnel qui consomme",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Un consommateur professionnel",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Un producteur de contenu professionnel",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Le pro-sumer (producteur + consommateur) désigne les fans qui ne se contentent pas de consommer passivement, mais créent aussi du contenu : fanfictions, fan art, vidéos, analyses, etc.",
+      "sourceReference": "Cours d'Elisa - Jenkins, pro-sumer"
+    },
+    {
+      "id": "E046",
+      "questionText": "Quels sont les trois piliers de la culture de la convergence selon Jenkins ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "Convergence médiatique, culture participative, intelligence collective",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Technologie, économie, société",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Production, distribution, réception",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Médias, publics, créateurs",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Jenkins identifie trois piliers interconnectés : convergence médiatique (flux sur multiples plateformes), culture participative (consommateurs actifs), et intelligence collective (savoir partagé, contre-pouvoir).",
+      "sourceReference": "Cours d'Elisa - Culture de la convergence, 3 piliers"
+    },
+    {
+      "id": "E047",
+      "questionText": "Quelle est la principale critique adressée au transmédia storytelling concernant le public ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "Vision idéalisée d'un public super actif, alors que la majorité des gens sont exclus par des barrières (compétences, économiques, temporelles)",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Le public est trop passif",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Le public ne comprend pas les références",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Le public est trop critique",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "La critique majeure : le transmédia suppose un public idéal ultra-actif, mais en réalité, la majorité des gens sont exclus par des barrières (compétences techniques, coûts économiques, manque de temps). Seuls 5-10% sont des fans hardcore.",
+      "sourceReference": "Cours d'Elisa - Limites du transmédia"
+    },
+    {
+      "id": "E048",
+      "questionText": "Quelle est la citation célèbre d'Edward T. Hall sur la culture ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "La culture cache plus de choses qu'elle n'en révèle et, étrangement, ce qu'elle cache, c'est à ses membres qu'elle le cache le mieux",
+          "isCorrect": true
+        },
+        {
+          "answerText": "La culture est un système de signes",
+          "isCorrect": false
+        },
+        {
+          "answerText": "La culture est universelle",
+          "isCorrect": false
+        },
+        {
+          "answerText": "La culture est visible",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Hall souligne le paradoxe de la culture : elle nous impose des règles, normes, valeurs que nous avons intériorisées, mais nous ne les voyons pas car elles nous semblent 'naturelles'. C'est 'l'invisible culturel'.",
+      "sourceReference": "Cours d'Elisa - Hall, citation sur la culture"
+    },
+    {
+      "id": "E049",
+      "questionText": "Qu'est-ce que la rumeur d'Orléans selon Edgar Morin ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Une étude de cas emblématique montrant comment une rumeur se propage et s'amplifie dans un contexte social spécifique",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Une rumeur historique",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Un exemple de fake news",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Une théorie de la communication",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Morin a étudié en 1969 une rumeur antisémite à Orléans pour comprendre comment les rumeurs se propagent. Il montre que pour comprendre une rumeur, il faut comprendre l'organisation sociale et culturelle du contexte où elle circule.",
+      "sourceReference": "Cours d'Elisa - Morin, rumeur d'Orléans"
+    },
+    {
+      "id": "E050",
+      "questionText": "Quels sont les trois ingrédients identifiés par Morin qui ont permis à la rumeur d'Orléans de prendre une telle ampleur ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "Un échafaudage mythologique chargé de fantasmes, le juif comme l'ennemi proche mais étrange (antisémitisme latent), l'émancipation féminine et la modernité créant de l'anxiété",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Les médias, Internet, la crédulité",
+          "isCorrect": false
+        },
+        {
+          "answerText": "La peur, l'ignorance, la manipulation",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Le contexte politique, économique, social",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Morin identifie trois éléments : des mythes ancestraux (traite des Blanches), un antisémitisme latent en province, et l'anxiété face à la modernité (émancipation féminine, transformation urbaine). La rumeur traduit une inquiétude rétrograde face au changement.",
+      "sourceReference": "Cours d'Elisa - Morin, ingrédients de la rumeur"
+    },
+    {
+      "id": "E051",
+      "questionText": "Qu'est-ce que la citation de Birdwhistell : 'Un individu ne communique pas, il prend part à la communication' signifie ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "La communication est un système collectif auquel les individus participent, personne ne possède la communication",
+          "isCorrect": true
+        },
+        {
+          "answerText": "On ne peut pas communiquer seul",
+          "isCorrect": false
+        },
+        {
+          "answerText": "La communication nécessite plusieurs personnes",
+          "isCorrect": false
+        },
+        {
+          "answerText": "On participe à des événements de communication",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Cette citation révolutionne la vision de la communication : ce n'est plus un individu qui 'fait' la communication, mais un système collectif auquel on participe. Comme dans une danse, personne ne 'fait' la danse seul, on y participe ensemble.",
+      "sourceReference": "Cours d'Elisa - Birdwhistell, citation"
+    },
+    {
+      "id": "E052",
+      "questionText": "Quelle différence culturelle Birdwhistell a-t-il identifiée dans les rituels amoureux entre le Royaume-Uni et les États-Unis ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Au Royaume-Uni, un baiser sur la bouche = étape avancée proche de la conclusion, aux USA = début de la conquête",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Les Britanniques sont plus romantiques",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Les Américains sont plus directs",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Il n'y a pas de différence",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Birdwhistell a montré que le même geste (baiser sur la bouche) a une signification différente selon la culture : étape avancée au UK, début aux USA. Cela créait des malentendus entre soldats américains et jeunes Anglaises pendant la guerre.",
+      "sourceReference": "Cours d'Elisa - Birdwhistell, rituels amoureux"
+    },
+    {
+      "id": "E053",
+      "questionText": "Qu'est-ce que l'embrayage selon Maingueneau ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "L'ensemble des opérations par lesquelles un énoncé s'ancre dans sa situation d'énonciation, et les embrayeurs sont les éléments qui marquent cet ancrage",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Le démarrage d'une conversation",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Le passage d'un sujet à un autre",
+          "isCorrect": false
+        },
+        {
+          "answerText": "L'activation d'un dispositif",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "L'embrayage est le processus par lequel un message se connecte à sa situation concrète (qui parle, où, quand). Les embrayeurs sont les déictiques (je, tu, ici, maintenant) qui montrent cette connexion.",
+      "sourceReference": "Cours d'Elisa - Embrayage"
+    },
+    {
+      "id": "E054",
+      "questionText": "Quelle est la distinction entre énoncé et énonciation ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "L'énoncé = le contenu, ce qui est dit. L'énonciation = la manière de dire, l'apparition située de l'énoncé",
+          "isCorrect": true
+        },
+        {
+          "answerText": "L'énoncé est écrit, l'énonciation est orale",
+          "isCorrect": false
+        },
+        {
+          "answerText": "L'énoncé est formel, l'énonciation est informelle",
+          "isCorrect": false
+        },
+        {
+          "answerText": "L'énoncé est vrai, l'énonciation est fausse",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "L'énoncé est le message en tant que tel (les mots, le contenu). L'énonciation est comment le message est produit (par qui, pour qui, dans quel contexte, avec quel ton). Le même énoncé peut avoir des énonciations très différentes.",
+      "sourceReference": "Cours d'Elisa - Énoncé et énonciation"
+    },
+    {
+      "id": "E055",
+      "questionText": "Qu'est-ce qu'une inférence en sémiotique cognitive ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "Une association d'idées qui suit une logique appartenant à un ensemble de conventions, permettant de compléter le sens implicite",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Une déduction logique",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Une supposition",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Une interprétation libre",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "L'inférence est le processus par lequel on complète, on fait des hypothèses, on devine ce que l'autre veut dire au-delà de ce qui est explicitement dit. C'est une activité essentielle car une grande partie de la communication est implicite.",
+      "sourceReference": "Cours d'Elisa - Inférences"
+    },
+    {
+      "id": "E056",
+      "questionText": "Quelle métaphore conceptuelle est illustrée par les expressions 'Je vais investir du temps' ou 'Ne gaspille pas ton temps' ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "LE TEMPS C'EST DE L'ARGENT",
+          "isCorrect": true
+        },
+        {
+          "answerText": "LA VIE EST UN VOYAGE",
+          "isCorrect": false
+        },
+        {
+          "answerText": "LA DISCUSSION C'EST LA GUERRE",
+          "isCorrect": false
+        },
+        {
+          "answerText": "LE TEMPS C'EST UN CONTENANT",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Ces expressions montrent qu'on comprend le temps (abstrait) en termes d'argent (concret) : on peut 'investir', 'gaspiller', 'économiser', 'perdre' le temps comme on le ferait avec de l'argent.",
+      "sourceReference": "Cours d'Elisa - Métaphores conceptuelles, temps/argent"
+    },
+    {
+      "id": "E057",
+      "questionText": "Quelle métaphore conceptuelle structure les expressions comme 'Ton argument est indéfendable' ou 'J'ai démoli son argumentation' ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "LA DISCUSSION C'EST LA GUERRE",
+          "isCorrect": true
+        },
+        {
+          "answerText": "LE TEMPS C'EST DE L'ARGENT",
+          "isCorrect": false
+        },
+        {
+          "answerText": "LA VIE EST UN VOYAGE",
+          "isCorrect": false
+        },
+        {
+          "answerText": "LA COMMUNICATION C'EST UN COMBAT",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Ces expressions montrent qu'on conçoit les discussions comme des guerres : on 'attaque', on 'défend', on 'démolit' les arguments. C'est une vision compétitive plutôt que coopérative de la discussion.",
+      "sourceReference": "Cours d'Elisa - Métaphores conceptuelles, discussion/guerre"
+    },
+    {
+      "id": "E058",
+      "questionText": "Qu'est-ce que la citation de Verhaegen sur la sémiotique pragmatique souligne ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "Tout échange de communication implique des sujets qui construisent ensemble une relation, négocient, exercent du pouvoir, et établissent la frontière entre fiction et réalité",
+          "isCorrect": true
+        },
+        {
+          "answerText": "La communication est un système de signes",
+          "isCorrect": false
+        },
+        {
+          "answerText": "La communication transmet de l'information",
+          "isCorrect": false
+        },
+        {
+          "answerText": "La communication est linéaire",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Verhaegen montre que la communication n'est pas juste transmission d'information, mais construction de relations où on négocie, on exerce du pouvoir, on se positionne, et on établit ce qui est réel ou fictif.",
+      "sourceReference": "Cours d'Elisa - Sémiotique pragmatique, Verhaegen"
+    },
+    {
+      "id": "E059",
+      "questionText": "Quelle est la principale limite de la sémiotique pragmatique ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "Les actes de langage sont déterminés par des conventions trop figées, et prise en compte rudimentaire du travail d'interprétation actif des interlocuteurs",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Elle ignore le contexte",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Elle est trop complexe",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Elle ne s'applique qu'à l'oral",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "La sémiotique pragmatique reste trop rigide dans sa vision des actes de langage (règles fixes) et ne donne pas assez d'importance au travail actif et créatif d'interprétation que font réellement les interlocuteurs.",
+      "sourceReference": "Cours d'Elisa - Limites sémiotique pragmatique"
+    },
+    {
+      "id": "E060",
+      "questionText": "Quelle est la principale force de l'anthropologie de la communication ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Analyse du vécu concret, lien entre pratiques locales et structures globales, vision de la communication comme processus participatif",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Théorie abstraite",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Focus sur les médias",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Vision mécaniste",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "L'anthropologie de la communication étudie le vécu concret dans des micro-univers, fait le lien entre interactions individuelles et structures culturelles globales, et voit la communication comme un processus où les acteurs construisent activement les significations.",
+      "sourceReference": "Cours d'Elisa - Forces anthropologie communication"
+    },
+    {
+      "id": "E061",
+      "questionText": "Quelle est la principale limite de l'anthropologie de la communication ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "S'intéresse peu aux interactions médiatiques et a besoin d'autres approches plus spécialisées",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Elle est trop théorique",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Elle ignore le contexte",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Elle est trop mécaniste",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "L'anthropologie de la communication se concentre sur les interactions en face-à-face dans des lieux physiques, mais néglige la communication médiatique et en ligne. Elle donne un cadre général mais a besoin d'approches plus spécialisées.",
+      "sourceReference": "Cours d'Elisa - Limites anthropologie communication"
+    },
+    {
+      "id": "E062",
+      "questionText": "Quelle est la principale critique politique/économique adressée au transmédia storytelling ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "Une théorie qui aide les producteurs/industries à garder le contrôle et à gérer les communautés pour servir leurs intérêts, exploitant le travail gratuit des fans",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Elle donne trop de pouvoir aux fans",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Elle est trop démocratique",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Elle ignore les industries",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "La critique montre qu'en apparence le transmédia donne du pouvoir aux fans, mais en réalité les studios utilisent l'enthousiasme des fans pour leur profit, les fans travaillent gratuitement (créations, marketing), et les studios gardent le contrôle ultime.",
+      "sourceReference": "Cours d'Elisa - Critique transmédia, exploitation"
+    },
+    {
+      "id": "E063",
+      "questionText": "Quelle est la principale limite académique du transmédia selon Jenkins ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "Une théorie fortement focalisée sur la fiction et le divertissement, peu d'attention aux autres domaines (journalisme, éducation, politique)",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Elle est trop générale",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Elle ignore la fiction",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Elle est trop technique",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Jenkins analyse surtout Star Wars, Marvel, Harry Potter (culture pop). Mais le transmédia existe aussi dans le journalisme, l'éducation, la politique, l'art - domaines peu théorisés dans ce cadre, ce qui limite la portée de la théorie.",
+      "sourceReference": "Cours d'Elisa - Limite académique transmédia"
+    },
+    {
+      "id": "E064",
+      "questionText": "Qu'est-ce que l'exemple 'Bert is Evil' illustre sur la culture de convergence ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "Les collisions culturelles imprévisibles, la perte de contrôle des créateurs, et les conséquences inattendues de la culture participative",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Le pouvoir des mèmes",
+          "isCorrect": false
+        },
+        {
+          "answerText": "L'humour sur Internet",
+          "isCorrect": false
+        },
+        {
+          "answerText": "La manipulation des images",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "L'affaire Bert/Ben Laden montre comment un mème satirique américain a été utilisé sérieusement par des manifestants bangladais, créant un scandale international. Cela illustre les collisions culturelles, la décontextualisation, et l'impossibilité de contrôler la circulation des contenus.",
+      "sourceReference": "Cours d'Elisa - Culture convergence, Bert is Evil"
+    },
+    {
+      "id": "E065",
+      "questionText": "Qu'est-ce que la convergence médiatique selon Jenkins ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Coopération entre industries médiatiques, flux de contenu sur multiples plateformes, et comportement migrateur des publics",
+          "isCorrect": true
+        },
+        {
+          "answerText": "La fusion de tous les médias en un seul",
+          "isCorrect": false
+        },
+        {
+          "answerText": "L'uniformisation des contenus",
+          "isCorrect": false
+        },
+        {
+          "answerText": "La disparition des médias traditionnels",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "La convergence médiatique implique que différentes industries travaillent ensemble, que le contenu circule sur plusieurs plateformes, et que les publics migrent d'une plateforme à l'autre pour suivre le contenu qu'ils aiment.",
+      "sourceReference": "Cours d'Elisa - Convergence médiatique"
+    },
+    {
+      "id": "E066",
+      "questionText": "Qu'est-ce que l'intelligence collective dans la culture de convergence ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "L'importance des interactions sociales, la consommation comme processus collectif, et une source alternative de pouvoir médiatique",
+          "isCorrect": true
+        },
+        {
+          "answerText": "L'intelligence artificielle",
+          "isCorrect": false
+        },
+        {
+          "answerText": "L'intelligence des créateurs",
+          "isCorrect": false
+        },
+        {
+          "answerText": "L'intelligence des algorithmes",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "L'intelligence collective émerge des interactions entre individus qui partagent leurs connaissances. La consommation médiatique devient un processus social collectif, créant un contre-pouvoir face aux industries médiatiques.",
+      "sourceReference": "Cours d'Elisa - Intelligence collective"
+    },
+    {
+      "id": "E067",
+      "questionText": "Quel problème de cohérence narrative illustre l'exemple de Star Wars Galaxies ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "Les incohérences temporelles dans un univers transmédia : le jeu contenait des éléments suggérant différentes périodes chronologiques, rendant impossible de déterminer une date concrète",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Les contradictions entre les films",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Les erreurs de scénario",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Les problèmes techniques",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Star Wars Galaxies illustre le défi du transmédia : maintenir la cohérence narrative sur plusieurs plateformes. Le jeu contenait des incohérences temporelles (certains éléments suggéraient 0 ABY, d'autres 3 ABY), montrant la difficulté de coordonner un univers transmédia.",
+      "sourceReference": "Cours d'Elisa - Transmédia, problème cohérence Star Wars"
+    },
+    {
+      "id": "E068",
+      "questionText": "Qu'est-ce que le Story Group dans l'univers Star Wars ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Un groupe de travail créé par Disney/Lucasfilm pour maintenir la cohérence de tout le contenu Star Wars et coordonner les différents créateurs",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Un groupe de fans",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Les scénaristes des films",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Un groupe de recherche",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Le Story Group est une réponse organisationnelle au défi de cohérence du transmédia : un groupe qui approuve ou rejette les idées créatives, s'assure qu'il n'y a pas de contradictions, et coordonne les différents créateurs de l'univers Star Wars.",
+      "sourceReference": "Cours d'Elisa - Story Group Star Wars"
+    },
+    {
+      "id": "E069",
+      "questionText": "Quel exemple illustre le pouvoir économique des fans dans le transmédia ?",
+      "difficulty": "medium",
+      "answers": [
+        {
+          "answerText": "Sonic le film : les fans ont forcé Paramount à retarder la sortie et refaire complètement l'animation du personnage après avoir critiqué le design",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Star Wars : les fans ont créé des fanfictions",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Marvel : les fans regardent les films",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Harry Potter : les fans lisent les livres",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "L'exemple de Sonic montre le pouvoir économique des fans : critiques massives sur les réseaux sociaux ont forcé Paramount à retarder le film, refaire l'animation (coût : millions de dollars), prouvant que les studios dépendent des fans pour le succès commercial.",
+      "sourceReference": "Cours d'Elisa - Pouvoir fans, Sonic"
+    },
+    {
+      "id": "E070",
+      "questionText": "Qu'est-ce que l'exemple de Westworld illustre sur le pouvoir des fans ?",
+      "difficulty": "hard",
+      "answers": [
+        {
+          "answerText": "L'intelligence collective des fans : les fans sur Reddit ont deviné un twist majeur de la saison 2, forçant les créateurs à changer leur scénario",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Les fans créent du contenu",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Les fans regardent la série",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Les fans critiquent la série",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "L'exemple de Westworld montre l'intelligence collective : en mettant en commun leurs observations sur Reddit, les fans ont anticipé un twist majeur. Les créateurs ont dû changer leur scénario, illustrant le dilemme : satisfaire les fans vs surprendre les fans.",
+      "sourceReference": "Cours d'Elisa - Intelligence collective, Westworld"
     }
   ]
 }

@@ -20,40 +20,85 @@ function escapeSQL(str: string): string {
 const sqlFile = path.join(process.cwd(), 'scripts', 'seed-d1-elisa-temp.sql');
 let sqlContent = '';
 
-// Créer la catégorie pour Elisa (à personnaliser selon sa spécialité)
-console.log('📝 Creating category for Elisa...');
+// Créer la catégorie Communication
+console.log('📝 Creating category for Communication...');
 sqlContent += `INSERT OR REPLACE INTO categories (id, name, description, color, icon, createdAt, updatedAt)
-VALUES ('cat-elisa', 'Spécialité Elisa', 'Questions de la spécialité d''Elisa', '#E91E63', '💊', datetime('now'), datetime('now'));
+VALUES ('cat-elisa', 'Communication', 'Théories et approches de la communication', '#9C27B0', '💬', datetime('now'), datetime('now'));
 
 `;
 
-// Organiser les questions par quiz (à adapter selon le nombre de questions)
-// Pour l'instant, structure de base avec quiz par tranche de 50 questions
-const totalQuestions = data.questions.length;
-const quizzesPerBatch = 50;
-const quizzes: any[] = [];
-
-// Créer des quiz par batch de 50 questions
-const numBatches = Math.ceil(totalQuestions / quizzesPerBatch);
-for (let i = 0; i < numBatches; i++) {
-  const start = i * quizzesPerBatch;
-  const end = Math.min((i + 1) * quizzesPerBatch, totalQuestions);
-
-  quizzes.push({
-    id: `quiz-elisa-${i + 1}`,
-    title: `Spécialité Elisa - Module ${i + 1}`,
-    description: `Questions ${start + 1} à ${end}`,
-    questions: data.questions.slice(start, end),
-  });
-}
-
-// Ajouter un quiz avec toutes les questions mélangées
-quizzes.push({
-  id: 'quiz-elisa-all',
-  title: 'Spécialité Elisa - Toutes les questions (Mélangées)',
-  description: `Toutes les ${totalQuestions} questions mélangées pour une révision complète`,
-  questions: [...data.questions].sort(() => Math.random() - 0.5), // Mélanger
-});
+// Organiser les questions par quiz selon les catégories du cours
+const quizzes = [
+  {
+    id: 'quiz-elisa-1',
+    title: 'Communication - Introduction et Métaphores',
+    description: 'Introduction à la communication, métaphores mécaniste/organiste (Winkin)',
+    questions: data.questions.slice(0, 5), // E001-E005
+  },
+  {
+    id: 'quiz-elisa-2',
+    title: 'Communication - Théorie Mathématique de Shannon',
+    description: 'Théorie mathématique de l\'information, schéma de Shannon, bit, bruit et redondance',
+    questions: data.questions.slice(5, 10), // E006-E010
+  },
+  {
+    id: 'quiz-elisa-3',
+    title: 'Communication - Théories Fonctionnalistes',
+    description: 'Lasswell, École de Francfort, Lazarsfeld, Katz, gatekeeping, agenda-setting, spirale du silence',
+    questions: data.questions.slice(10, 19), // E011-E019
+  },
+  {
+    id: 'quiz-elisa-4',
+    title: 'Communication - Théories Structurales',
+    description: 'Saussure (langue/parole, arbitraire du signe), Jakobson (6 fonctions), Barthes (dénotation/connotation, mythologies)',
+    questions: data.questions.slice(19, 25), // E020-E025
+  },
+  {
+    id: 'quiz-elisa-5',
+    title: 'Communication - Approches Narratologiques',
+    description: 'Propp (31 fonctions, 7 rôles), Greimas (schéma actantiel), Eco (lector in fabula, lecteur modèle)',
+    questions: data.questions.slice(25, 30), // E026-E030
+  },
+  {
+    id: 'quiz-elisa-6',
+    title: 'Communication - École de Palo Alto',
+    description: 'Les 5 axiomes de la communication, interactions symétriques/complémentaires, digital/analogique',
+    questions: data.questions.slice(30, 36), // E031-E036
+  },
+  {
+    id: 'quiz-elisa-7',
+    title: 'Communication - Sémiotique Pragmatique',
+    description: 'Benveniste (histoire/discours), déictiques, Austin (actes de langage), Lakoff & Johnson (métaphores conceptuelles), Birdwhistell (kinésique), Hall (proxémique), embrayage, énoncé/énonciation, inférences',
+    questions: [
+      ...data.questions.slice(36, 43), // E037-E042
+      ...data.questions.slice(50, 59), // E051-E059
+    ],
+  },
+  {
+    id: 'quiz-elisa-8',
+    title: 'Communication - Transmédia et Culture de Convergence',
+    description: 'Jenkins (transmédia storytelling, pro-sumer, culture participative, intelligence collective), critiques et limites',
+    questions: [
+      ...data.questions.slice(43, 48), // E043-E047
+      ...data.questions.slice(61, 70), // E062-E070
+    ],
+  },
+  {
+    id: 'quiz-elisa-9',
+    title: 'Communication - Repositionnements et Anthropologie',
+    description: 'Morin (rumeur d\'Orléans), Cultural Studies, anthropologie de la communication',
+    questions: [
+      ...data.questions.slice(47, 51), // E048-E050
+      ...data.questions.slice(59, 62), // E060-E061
+    ],
+  },
+  {
+    id: 'quiz-elisa-all',
+    title: 'Communication - Toutes les questions (Mélangées)',
+    description: `Toutes les ${data.questions.length} questions de communication mélangées pour une révision complète`,
+    questions: [...data.questions].sort(() => Math.random() - 0.5), // Mélanger
+  },
+];
 
 // Créer les quizzes et questions
 for (const quizData of quizzes) {

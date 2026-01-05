@@ -125,11 +125,11 @@ export default function QuizPage({ params }: { params: Promise<{ id: string }> }
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-stone-700 flex flex-col">
+      <div className="min-h-screen bg-stone-50 flex flex-col">
         <Header />
         <div className="container mx-auto px-4 py-20 text-center flex-1">
           <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-orange-500 border-t-transparent"></div>
-          <p className="mt-4 text-stone-200">Chargement du quiz...</p>
+          <p className="mt-4 text-stone-700">Chargement du quiz...</p>
         </div>
         <Footer />
       </div>
@@ -138,10 +138,10 @@ export default function QuizPage({ params }: { params: Promise<{ id: string }> }
 
   if (!quiz) {
     return (
-      <div className="min-h-screen bg-stone-700 flex flex-col">
+      <div className="min-h-screen bg-stone-50 flex flex-col">
         <Header />
         <div className="container mx-auto px-4 py-20 text-center flex-1">
-          <p className="text-stone-200 mb-6">Quiz non trouvé</p>
+          <p className="text-stone-700 mb-6">Quiz non trouvé</p>
           <Link href="/">
             <Button>Retour à l'accueil</Button>
           </Link>
@@ -157,17 +157,17 @@ export default function QuizPage({ params }: { params: Promise<{ id: string }> }
     const percentage = Math.round((correctCount / totalQuestions) * 100);
 
     return (
-      <div className="min-h-screen bg-stone-700 flex flex-col">
+      <div className="min-h-screen bg-stone-50 flex flex-col">
         <Header />
         <main className="container mx-auto px-4 py-8 max-w-4xl flex-1">
           <Card className="animate-scale-in">
             <CardContent className="py-8">
               <div className="text-center mb-8">
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-orange-800/40 flex items-center justify-center border-4 border-orange-600">
-                  <span className="text-4xl font-bold text-orange-400">{percentage}%</span>
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-orange-100 flex items-center justify-center border-4 border-orange-500">
+                  <span className="text-4xl font-bold text-orange-600">{percentage}%</span>
                 </div>
-                <h2 className="text-2xl font-bold text-stone-50 mb-2">Quiz terminé !</h2>
-                <p className="text-stone-200">
+                <h2 className="text-2xl font-bold text-stone-900 mb-2">Quiz terminé !</h2>
+                <p className="text-stone-600">
                   {correctCount} bonne{correctCount > 1 ? 's' : ''} réponse{correctCount > 1 ? 's' : ''} sur {totalQuestions}
                 </p>
               </div>
@@ -183,12 +183,12 @@ export default function QuizPage({ params }: { params: Promise<{ id: string }> }
                     <div
                       key={question.id}
                       className={`p-4 rounded-lg border-2 ${
-                        isCorrect ? 'border-green-600 bg-green-900/30' : 'border-red-600 bg-red-900/30'
+                        isCorrect ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50'
                       }`}
                     >
                       <div className="flex items-start gap-3">
                         <div className={`mt-0.5 w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 ${
-                          isCorrect ? 'bg-green-900/300' : 'bg-red-900/300'
+                          isCorrect ? 'bg-green-500' : 'bg-red-500'
                         }`}>
                           {isCorrect ? (
                             <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -201,11 +201,11 @@ export default function QuizPage({ params }: { params: Promise<{ id: string }> }
                           )}
                         </div>
                         <div className="flex-1">
-                          <p className="font-medium text-stone-50 mb-2">
+                          <p className="font-medium text-stone-900 mb-2">
                             Question {index + 1}: {question.questionText}
                           </p>
                           {question.explanation && (
-                            <p className="text-sm text-stone-200 bg-stone-800/60 p-3 rounded-lg border border-stone-600">
+                            <p className="text-sm text-stone-700 bg-stone-100 p-3 rounded-lg border border-stone-200">
                               {question.explanation}
                             </p>
                           )}
@@ -240,22 +240,22 @@ export default function QuizPage({ params }: { params: Promise<{ id: string }> }
     : 0;
 
     return (
-      <div className="min-h-screen bg-stone-700 flex flex-col">
+      <div className="min-h-screen bg-stone-50 flex flex-col">
         <Header />
 
         <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 max-w-3xl flex-1">
           <div className="mb-6">
             <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
               <div className="flex items-center gap-3">
-                <span className="text-sm font-medium text-stone-200">
+                <span className="text-sm font-medium text-stone-700">
                 Question {currentQuestionIndex + 1} sur {quiz.questions.length}
               </span>
               {answeredQuestionsCount > 0 && (
-                <div className="flex items-center gap-2 px-3 py-1 bg-orange-900/30 rounded-full border border-orange-600">
-                  <span className="text-sm font-semibold text-orange-300">
+                <div className="flex items-center gap-2 px-3 py-1 bg-orange-100 rounded-full border border-orange-300">
+                  <span className="text-sm font-semibold text-orange-700">
                     {correctAnswersCount}/{answeredQuestionsCount}
                   </span>
-                  <span className="text-xs text-orange-400">
+                  <span className="text-xs text-orange-600">
                     ({currentPercentage}%)
                   </span>
                 </div>
@@ -278,7 +278,7 @@ export default function QuizPage({ params }: { params: Promise<{ id: string }> }
 
         <Card className="animate-fade-in">
           <CardContent className="py-6 sm:py-8">
-            <h2 className="text-lg sm:text-xl font-semibold text-stone-50 mb-4 sm:mb-6">
+            <h2 className="text-lg sm:text-xl font-semibold text-stone-900 mb-4 sm:mb-6">
               {currentQuestion.questionText}
             </h2>
 
@@ -295,20 +295,20 @@ export default function QuizPage({ params }: { params: Promise<{ id: string }> }
                     disabled={isValidated}
                     className={`w-full text-left p-3 sm:p-4 rounded-lg border-2 transition-all ${
                       showCorrect
-                        ? 'border-green-500 bg-green-900/30'
+                        ? 'border-green-500 bg-green-50'
                         : showIncorrect
-                        ? 'border-red-500 bg-red-900/30'
+                        ? 'border-red-500 bg-red-50'
                         : isSelected
-                        ? 'border-orange-500 bg-orange-900/30'
-                        : 'border-stone-600 hover:border-orange-300 bg-stone-800/60'
+                        ? 'border-orange-500 bg-orange-50'
+                        : 'border-stone-200 hover:border-orange-500 bg-white'
                     } ${isValidated ? 'cursor-default' : 'cursor-pointer'}`}
                   >
                     <div className="flex items-center gap-3">
                       <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0 ${
                         showCorrect
-                          ? 'border-green-500 bg-green-900/300'
+                          ? 'border-green-500 bg-green-500'
                           : showIncorrect
-                          ? 'border-red-500 bg-red-900/300'
+                          ? 'border-red-500 bg-red-500'
                           : isSelected
                           ? 'border-orange-500'
                           : 'border-stone-300'
@@ -323,11 +323,11 @@ export default function QuizPage({ params }: { params: Promise<{ id: string }> }
                           </svg>
                         )}
                         {isSelected && !isValidated && (
-                          <div className="w-2.5 h-2.5 rounded-full bg-orange-900/300" />
+                          <div className="w-2.5 h-2.5 rounded-full bg-orange-500" />
                         )}
                       </div>
                       <span className={`flex-1 ${
-                        showCorrect ? 'text-green-900' : showIncorrect ? 'text-red-900' : 'text-stone-50'
+                        showCorrect ? 'text-green-900' : showIncorrect ? 'text-red-900' : 'text-stone-900'
                       }`}>
                         {answer.answerText}
                       </span>
@@ -338,7 +338,7 @@ export default function QuizPage({ params }: { params: Promise<{ id: string }> }
             </div>
 
             {isValidated && currentQuestion.explanation && (
-              <div className="mb-6 p-4 bg-orange-900/30 border border-orange-600 rounded-lg">
+              <div className="mb-6 p-4 bg-orange-50 border border-orange-200 rounded-lg">
                 <p className="text-sm font-medium text-orange-900 mb-1">Explication</p>
                 <p className="text-sm text-orange-800">{currentQuestion.explanation}</p>
               </div>
