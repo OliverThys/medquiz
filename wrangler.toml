@@ -5,6 +5,7 @@ pages_build_output_dir = ".vercel/output/static"
 
 [env.production]
 name = "medquiz"
+compatibility_flags = ["nodejs_compat"]
 
 [[env.production.d1_databases]]
 binding = "DB"
