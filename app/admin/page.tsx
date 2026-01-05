@@ -7,6 +7,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useState, useEffect } from 'react';
 
+// Disable static generation for this page
+export const dynamic = 'force-dynamic';
+
 export default function AdminPage() {
   const [progress, setProgress] = useState(0);
 
