@@ -5,39 +5,39 @@ html {
 }
 
 body {
-  @apply bg-neutral-50 text-neutral-900;
-  background-color: #fafaf9;
-  color: #1c1917;
+  @apply bg-stone-50 text-stone-800;
+  background-color: #f5f5f4;
+  color: #292524;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--font-sans);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Scrollbar personnalisée orange élégante */
+/* Scrollbar personnalisée orange douce */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #fff7ed;
+  background-color: #fafaf9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #fb923c;
+  background-color: #fdba74;
   border-radius: 9999px;
   transition: background-color 0.2s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #f97316;
+  background-color: #fb923c;
 }
 
-/* Sélection de texte orange */
+/* Sélection de texte orange douce */
 ::selection {
-  background-color: #ffedd5;
-  color: #9a3412;
+  background-color: #fed7aa;
+  color: #7c2d12;
 }
 
 /* Animations fluides */

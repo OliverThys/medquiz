@@ -20,7 +20,7 @@ export default function AdminPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-orange-50/20 to-neutral-50 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-stone-50 via-orange-50/20 to-stone-50 flex flex-col">
       <Header />
 
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 flex-1 flex items-center justify-center">
@@ -63,7 +63,7 @@ export default function AdminPage() {
               </div>
 
               {/* Titre avec gradient */}
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-neutral-900 via-orange-600 to-neutral-900 bg-clip-text text-transparent">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-stone-900 via-orange-600 to-stone-900 bg-clip-text text-transparent">
                 Administration
               </h1>
 
@@ -73,17 +73,17 @@ export default function AdminPage() {
                 <span className="text-xs sm:text-sm font-semibold text-orange-700">En cours de développement</span>
               </div>
 
-              <p className="text-base sm:text-lg text-neutral-600 mb-6 sm:mb-8 max-w-lg mx-auto leading-relaxed px-4">
+              <p className="text-base sm:text-lg text-stone-600 mb-6 sm:mb-8 max-w-lg mx-auto leading-relaxed px-4">
                 Cette section est actuellement en construction. Elle permettra bientôt de gérer les catégories, quiz et questions de manière intuitive.
               </p>
 
               {/* Barre de progression animée et stylisée */}
               <div className="mb-10 max-w-md mx-auto">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-xs font-semibold text-neutral-600">Progression</span>
+                  <span className="text-xs font-semibold text-stone-600">Progression</span>
                   <span className="text-xs font-bold text-orange-600">{progress}%</span>
                 </div>
-                <div className="w-full bg-neutral-200 rounded-full h-4 overflow-hidden shadow-inner">
+                <div className="w-full bg-stone-200 rounded-full h-4 overflow-hidden shadow-inner">
                   <div
                     className="h-full bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 transition-all duration-1000 ease-out relative shadow-lg"
                     style={{ width: `${progress}%` }}
@@ -100,7 +100,7 @@ export default function AdminPage() {
 
               {/* Fonctionnalités à venir - Améliorées */}
               <div className="mb-2">
-                <h2 className="text-xs sm:text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">
+                <h2 className="text-xs sm:text-sm font-semibold text-stone-500 uppercase tracking-wider mb-4">
                   Fonctionnalités à venir
                 </h2>
               </div>
@@ -112,8 +112,8 @@ export default function AdminPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </div>
-                  <h3 className="font-bold text-sm sm:text-base text-neutral-900 mb-1">Gestion des Quiz</h3>
-                  <p className="text-xs sm:text-sm text-neutral-600">Créer et modifier vos QCM facilement</p>
+                  <h3 className="font-bold text-sm sm:text-base text-stone-900 mb-1">Gestion des Quiz</h3>
+                  <p className="text-xs sm:text-sm text-stone-600">Créer et modifier vos QCM facilement</p>
                 </div>
 
                 <div className="group p-4 sm:p-5 rounded-xl bg-gradient-to-br from-orange-50 to-orange-100/50 border-2 border-orange-200 hover:border-orange-400 transition-all hover:shadow-lg hover:-translate-y-1 duration-200">
@@ -122,8 +122,8 @@ export default function AdminPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
                     </svg>
                   </div>
-                  <h3 className="font-bold text-sm sm:text-base text-neutral-900 mb-1">Catégories</h3>
-                  <p className="text-xs sm:text-sm text-neutral-600">Organiser vos quiz par thème médical</p>
+                  <h3 className="font-bold text-sm sm:text-base text-stone-900 mb-1">Catégories</h3>
+                  <p className="text-xs sm:text-sm text-stone-600">Organiser vos quiz par thème médical</p>
                 </div>
 
                 <div className="group p-4 sm:p-5 rounded-xl bg-gradient-to-br from-orange-50 to-orange-100/50 border-2 border-orange-200 hover:border-orange-400 transition-all hover:shadow-lg hover:-translate-y-1 duration-200">
@@ -132,8 +132,8 @@ export default function AdminPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                     </svg>
                   </div>
-                  <h3 className="font-bold text-sm sm:text-base text-neutral-900 mb-1">Banque de Questions</h3>
-                  <p className="text-xs sm:text-sm text-neutral-600">Gérer et enrichir votre base</p>
+                  <h3 className="font-bold text-sm sm:text-base text-stone-900 mb-1">Banque de Questions</h3>
+                  <p className="text-xs sm:text-sm text-stone-600">Gérer et enrichir votre base</p>
                 </div>
 
                 <div className="group p-4 sm:p-5 rounded-xl bg-gradient-to-br from-orange-50 to-orange-100/50 border-2 border-orange-200 hover:border-orange-400 transition-all hover:shadow-lg hover:-translate-y-1 duration-200">
@@ -142,14 +142,14 @@ export default function AdminPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                   </div>
-                  <h3 className="font-bold text-sm sm:text-base text-neutral-900 mb-1">Statistiques</h3>
-                  <p className="text-xs sm:text-sm text-neutral-600">Analyser les performances</p>
+                  <h3 className="font-bold text-sm sm:text-base text-stone-900 mb-1">Statistiques</h3>
+                  <p className="text-xs sm:text-sm text-stone-600">Analyser les performances</p>
                 </div>
               </div>
 
               {/* Informations supplémentaires */}
-              <div className="mb-8 p-4 bg-neutral-100 rounded-lg border border-neutral-200 max-w-lg mx-auto">
-                <p className="text-xs text-neutral-600 leading-relaxed">
+              <div className="mb-8 p-4 bg-stone-100 rounded-lg border border-stone-200 max-w-lg mx-auto">
+                <p className="text-xs text-stone-600 leading-relaxed">
                   <span className="font-semibold text-orange-600">Note :</span> Cette interface permettra de gérer l'intégralité du contenu pédagogique. Vous pourrez ajouter, modifier et supprimer des quiz en toute simplicité.
                 </p>
               </div>

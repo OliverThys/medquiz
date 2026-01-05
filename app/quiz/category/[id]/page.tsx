@@ -127,11 +127,11 @@ export default function CategoryQuizPage({ params }: { params: Promise<{ id: str
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-neutral-50bg-neutral-950 flex flex-col">
+      <div className="min-h-screen bg-stone-50bg-stone-950 flex flex-col">
         <Header />
         <div className="container mx-auto px-4 py-20 text-center flex-1">
           <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-orange-500border-orange-600 border-t-transparent"></div>
-          <p className="mt-4 text-neutral-600text-neutral-400">Chargement du quiz...</p>
+          <p className="mt-4 text-stone-600text-stone-400">Chargement du quiz...</p>
         </div>
         <Footer />
       </div>
@@ -140,10 +140,10 @@ export default function CategoryQuizPage({ params }: { params: Promise<{ id: str
 
   if (!quiz) {
     return (
-      <div className="min-h-screen bg-neutral-50bg-neutral-950 flex flex-col">
+      <div className="min-h-screen bg-stone-50bg-stone-950 flex flex-col">
         <Header />
         <div className="container mx-auto px-4 py-20 text-center flex-1">
-          <p className="text-neutral-600text-neutral-400 mb-6">Quiz non trouvé</p>
+          <p className="text-stone-600text-stone-400 mb-6">Quiz non trouvé</p>
           <Link href="/">
             <Button>Retour à l'accueil</Button>
           </Link>
@@ -159,7 +159,7 @@ export default function CategoryQuizPage({ params }: { params: Promise<{ id: str
     const percentage = Math.round((correctCount / totalQuestions) * 100);
 
     return (
-      <div className="min-h-screen bg-neutral-50bg-neutral-950 flex flex-col">
+      <div className="min-h-screen bg-stone-50bg-stone-950 flex flex-col">
         <Header />
         <main className="container mx-auto px-4 py-8 max-w-4xl flex-1">
           <Card className="animate-scale-in">
@@ -168,8 +168,8 @@ export default function CategoryQuizPage({ params }: { params: Promise<{ id: str
                 <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-orange-100 flex items-center justify-center">
                   <span className="text-4xl font-bold text-orange-600">{percentage}%</span>
                 </div>
-                <h2 className="text-2xl font-bold text-neutral-900text-neutral-100 mb-2">Quiz terminé !</h2>
-                <p className="text-neutral-600text-neutral-400">
+                <h2 className="text-2xl font-bold text-stone-900text-stone-100 mb-2">Quiz terminé !</h2>
+                <p className="text-stone-600text-stone-400">
                   {correctCount} bonne{correctCount > 1 ? 's' : ''} réponse{correctCount > 1 ? 's' : ''} sur {totalQuestions}
                 </p>
               </div>
@@ -203,11 +203,11 @@ export default function CategoryQuizPage({ params }: { params: Promise<{ id: str
                           )}
                         </div>
                         <div className="flex-1">
-                          <p className="font-medium text-neutral-900text-neutral-100 mb-2">
+                          <p className="font-medium text-stone-900text-stone-100 mb-2">
                             Question {index + 1}: {question.questionText}
                           </p>
                           {question.explanation && (
-                            <p className="text-sm text-neutral-600text-neutral-400 bg-whitebg-neutral-800 p-3 rounded-lg border border-neutral-200border-neutral-700">
+                            <p className="text-sm text-stone-600text-stone-400 bg-whitebg-stone-800 p-3 rounded-lg border border-stone-200border-stone-700">
                               {question.explanation}
                             </p>
                           )}
@@ -243,14 +243,14 @@ export default function CategoryQuizPage({ params }: { params: Promise<{ id: str
     : 0;
 
   return (
-    <div className="min-h-screen bg-neutral-50bg-neutral-950 flex flex-col">
+    <div className="min-h-screen bg-stone-50bg-stone-950 flex flex-col">
         <Header />
 
         <main className="container mx-auto px-4 py-8 max-w-3xl flex-1">
           <div className="mb-6">
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-3">
-                <span className="text-sm font-medium text-neutral-600text-neutral-400">
+                <span className="text-sm font-medium text-stone-600text-stone-400">
                 Question {currentQuestionIndex + 1} sur {quiz.questions.length}
               </span>
               {answeredQuestionsCount > 0 && (
@@ -271,7 +271,7 @@ export default function CategoryQuizPage({ params }: { params: Promise<{ id: str
 
         <Card className="animate-fade-in">
           <CardContent className="py-8">
-            <h2 className="text-xl font-semibold text-neutral-900text-neutral-100 mb-6">
+            <h2 className="text-xl font-semibold text-stone-900text-stone-100 mb-6">
               {currentQuestion.questionText}
             </h2>
 
@@ -293,7 +293,7 @@ export default function CategoryQuizPage({ params }: { params: Promise<{ id: str
                         ? 'border-red-500 bg-red-50'
                         : isSelected
                         ? 'border-orange-500border-orange-600 bg-orange-50bg-orange-950'
-                        : 'border-neutral-200border-neutral-700 hover:border-orange-300hover:border-orange-700 bg-whitebg-neutral-900'
+                        : 'border-stone-200border-stone-700 hover:border-orange-300hover:border-orange-700 bg-whitebg-stone-900'
                     } ${isValidated ? 'cursor-default' : 'cursor-pointer'}`}
                   >
                     <div className="flex items-center gap-3">
@@ -304,7 +304,7 @@ export default function CategoryQuizPage({ params }: { params: Promise<{ id: str
                           ? 'border-red-500 bg-red-500'
                           : isSelected
                           ? 'border-orange-500'
-                          : 'border-neutral-300'
+                          : 'border-stone-300'
                       }`}>
                         {(showCorrect || showIncorrect) && (
                           <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -320,7 +320,7 @@ export default function CategoryQuizPage({ params }: { params: Promise<{ id: str
                         )}
                       </div>
                       <span className={`flex-1 ${
-                        showCorrect ? 'text-green-900text-green-100' : showIncorrect ? 'text-red-900text-red-100' : 'text-neutral-900text-neutral-100'
+                        showCorrect ? 'text-green-900text-green-100' : showIncorrect ? 'text-red-900text-red-100' : 'text-stone-900text-stone-100'
                       }`}>
                         {answer.answerText}
                       </span>
