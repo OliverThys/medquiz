@@ -2,8 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  // Cloudflare Pages gère automatiquement le build Next.js
-  // Aucune configuration spéciale requise
+  // Configuration pour Cloudflare Pages avec @cloudflare/next-on-pages
 };
 
 export default nextConfig;
