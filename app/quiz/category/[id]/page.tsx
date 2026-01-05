@@ -67,8 +67,8 @@ export default function CategoryQuizPage({ params }: { params: Promise<{ id: str
           const data = await response.json();
 
           // Mélanger les questions et les réponses
-          const shuffledQuestions = shuffleArray(data.questions);
-          const questionsWithShuffledAnswers = shuffledQuestions.map(question => ({
+          const shuffledQuestions = shuffleArray(data.questions as Question[]);
+          const questionsWithShuffledAnswers = shuffledQuestions.map((question: Question) => ({
             ...question,
             answers: shuffleArray(question.answers),
           }));
