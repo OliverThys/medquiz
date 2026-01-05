@@ -5,9 +5,9 @@ html {
 }
 
 body {
-  @apply bg-stone-50 text-stone-800;
-  background-color: #f5f5f4;
-  color: #292524;
+  @apply bg-stone-800 text-stone-100;
+  background-color: #292524;
+  color: #e7e5e4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--font-sans);
@@ -21,23 +21,23 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #fafaf9;
+  background-color: #1c1917;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #fdba74;
+  background-color: #fb923c;
   border-radius: 9999px;
   transition: background-color 0.2s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #fb923c;
+  background-color: #f97316;
 }
 
 /* Sélection de texte orange douce */
 ::selection {
-  background-color: #fed7aa;
-  color: #7c2d12;
+  background-color: #fb923c;
+  color: #1c1917;
 }
 
 /* Animations fluides */

@@ -1,8 +1,8 @@
 export function Footer() {
   return (
-    <footer className="border-t border-stone-200/50 bg-stone-50/80 backdrop-blur-sm mt-auto">
+    <footer className="border-t border-stone-700/50 bg-stone-900/80 backdrop-blur-sm mt-auto">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="text-center text-sm text-stone-600">
+        <div className="text-center text-sm text-stone-300">
           <p className="flex items-center justify-center gap-1.5 mb-1">
             Développé avec
             <svg
@@ -16,9 +16,9 @@ export function Footer() {
                 clipRule="evenodd"
               />
             </svg>
-            pour les <span className="font-semibold text-orange-600">Picca</span>
+            pour les <span className="font-semibold text-orange-400">Picca</span>
           </p>
-          <p className="text-xs text-stone-500">
+          <p className="text-xs text-stone-400">
             © {new Date().getFullYear()} MAOLYS. Tous droits réservés.
           </p>
         </div>
