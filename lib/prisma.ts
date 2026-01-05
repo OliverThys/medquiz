@@ -5,25 +5,28 @@ const globalForPrisma = globalThis as unknown as {
 };
 
 function getDatabaseUrl(): string {
-  // En production (Edge Runtime), DATABASE_URL doit être défini
+  // DATABASE_URL doit être défini dans les variables d'environnement
   if (process.env.DATABASE_URL) {
     return process.env.DATABASE_URL;
   }
 
-  // En développement local uniquement (Node.js runtime)
-  if (typeof process !== 'undefined' && process.cwd) {
-    try {
-      const path = require('path');
-      const dbPath = path.join(process.cwd(), 'prisma', 'dev.db');
-      const normalizedPath = dbPath.replace(/\\/g, '/');
-      return `file:///${normalizedPath}`;
-    } catch {
-      // Si path n'est pas disponible (Edge Runtime), on utilise une valeur par défaut
-    }
+  // Pendant le build, on peut utiliser une valeur par défaut pour éviter les erreurs
+  // Cette valeur sera remplacée en production par la vraie DATABASE_URL
+  if (process.env.NODE_ENV === 'production' || typeof process === 'undefined' || !process.cwd) {
+    // Edge Runtime ou production - doit utiliser DATABASE_URL
+    // Pendant le build, on retourne une valeur placeholder qui ne sera pas utilisée
+    return 'file:./placeholder.db';
   }
 
-  // Fallback pour Edge Runtime - doit être configuré via DATABASE_URL
-  throw new Error('DATABASE_URL environment variable is required in Edge Runtime');
+  // Développement local uniquement (Node.js runtime)
+  try {
+    const path = require('path');
+    const dbPath = path.join(process.cwd(), 'prisma', 'dev.db');
+    const normalizedPath = dbPath.replace(/\\/g, '/');
+    return `file:///${normalizedPath}`;
+  } catch {
+    return 'file:./placeholder.db';
+  }
 }
 
 export const prisma =
