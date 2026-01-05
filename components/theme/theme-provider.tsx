@@ -23,12 +23,16 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const initialTheme = savedTheme || 'light';
     setTheme(initialTheme);
 
-    // Appliquer le thème au DOM
+    // Appliquer le thème au DOM immédiatement
+    const htmlElement = document.documentElement;
     if (initialTheme === 'dark') {
-      document.documentElement.classList.add('dark');
+      htmlElement.classList.add('dark');
     } else {
-      document.documentElement.classList.remove('dark');
+      htmlElement.classList.remove('dark');
     }
+    
+    // Forcer la mise à jour du style
+    htmlElement.style.colorScheme = initialTheme;
   }, []);
 
   const toggleTheme = () => {
@@ -36,12 +40,16 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
 
-    // Appliquer le thème au DOM
+    // Appliquer le thème au DOM immédiatement
+    const htmlElement = document.documentElement;
     if (newTheme === 'dark') {
-      document.documentElement.classList.add('dark');
+      htmlElement.classList.add('dark');
     } else {
-      document.documentElement.classList.remove('dark');
+      htmlElement.classList.remove('dark');
     }
+    
+    // Forcer la mise à jour du style
+    htmlElement.style.colorScheme = newTheme;
   };
 
   // Éviter le flash de contenu non stylé

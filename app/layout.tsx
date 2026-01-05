@@ -18,6 +18,9 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   title: "MedQuiz - Révision Médicale Interactive",
   description: "Plateforme moderne de QCM pour réviser vos cours de médecine",
+  icons: {
+    icon: '/icon.svg',
+  },
 };
 
 export default function RootLayout({
@@ -27,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${inter.variable} ${caveat.variable}`} suppressHydrationWarning>
-      <body className="bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-50">
+      <body className="bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-50 transition-colors">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
