@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Dancing_Script } from "next/font/google";
+import { Inter, Caveat } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme/theme-provider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -8,7 +9,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const dancingScript = Dancing_Script({
+const caveat = Caveat({
   subsets: ["latin"],
   variable: "--font-handwriting",
   display: "swap",
@@ -25,8 +26,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${inter.variable} ${dancingScript.variable}`}>
-      <body>{children}</body>
+    <html lang="fr" className={`${inter.variable} ${caveat.variable}`} suppressHydrationWarning>
+      <body>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }

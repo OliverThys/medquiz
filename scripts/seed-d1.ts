@@ -12,17 +12,20 @@ console.log(`📚 Found ${data.questions.length} questions to import`);
 
 // Fonction pour échapper les chaînes SQL
 function escapeSQL(str: string): string {
-  return str.replace(/'/g, "''").replace(/\n/g, ' ');
+  if (!str) return '';
+  return str.replace(/'/g, "''").replace(/\n/g, ' ').replace(/\r/g, '');
 }
+
+// Créer un fichier SQL temporaire
+const sqlFile = path.join(process.cwd(), 'scripts', 'seed-d1-temp.sql');
+let sqlContent = '';
 
 // Créer la catégorie Néphrologie
 console.log('📝 Creating category...');
-const categorySQL = `
-INSERT OR REPLACE INTO categories (id, name, description, color, icon, createdAt, updatedAt)
+sqlContent += `INSERT OR REPLACE INTO categories (id, name, description, color, icon, createdAt, updatedAt)
 VALUES ('cat-nephro', 'Néphrologie', 'Questions sur le fonctionnement et les maladies des reins', '#5AB9EA', '🫘', datetime('now'), datetime('now'));
-`;
 
-execSync(`wrangler d1 execute medquiz-db --remote --command="${categorySQL.replace(/\n/g, ' ').trim()}"`, { stdio: 'inherit' });
+`;
 
 // Organiser les questions par quiz
 const quizzes = [
@@ -78,7 +81,7 @@ const quizzes = [
     id: 'quiz-nephro-all',
     title: 'Néphrologie - Toutes les questions (Mélangées)',
     description: 'Toutes les 400 questions de néphrologie mélangées pour une révision complète',
-    questions: data.questions.sort(() => Math.random() - 0.5), // Mélanger
+    questions: [...data.questions].sort(() => Math.random() - 0.5), // Mélanger
   },
 ];
 
@@ -99,16 +102,16 @@ for (const quizData of quizzes) {
     mainDifficulty = 'easy';
   }
 
+  // Supprimer les anciennes questions et le quiz
+  sqlContent += `DELETE FROM questions WHERE quizId = '${quizData.id}';\n`;
+  sqlContent += `DELETE FROM answers WHERE questionId IN (SELECT id FROM questions WHERE quizId = '${quizData.id}');\n`;
+  sqlContent += `DELETE FROM quizzes WHERE id = '${quizData.id}';\n`;
+
   // Créer le quiz
-  const quizSQL = `
-INSERT OR REPLACE INTO quizzes (id, title, description, categoryId, difficulty, createdAt, updatedAt)
+  sqlContent += `INSERT INTO quizzes (id, title, description, categoryId, difficulty, createdAt, updatedAt)
 VALUES ('${quizData.id}', '${escapeSQL(quizData.title)}', '${escapeSQL(quizData.description)}', 'cat-nephro', '${mainDifficulty}', datetime('now'), datetime('now'));
+
 `;
-
-  execSync(`wrangler d1 execute medquiz-db --remote --command="${quizSQL.replace(/\n/g, ' ').trim()}"`, { stdio: 'inherit' });
-
-  // Supprimer les anciennes questions
-  execSync(`wrangler d1 execute medquiz-db --remote --command="DELETE FROM questions WHERE quizId = '${quizData.id}';"`, { stdio: 'inherit' });
 
   // Créer les questions et réponses
   for (let i = 0; i < quizData.questions.length; i++) {
@@ -120,30 +123,36 @@ VALUES ('${quizData.id}', '${escapeSQL(quizData.title)}', '${escapeSQL(quizData.
       : q.explanation;
 
     // Créer la question
-    const questionSQL = `
-INSERT INTO questions (id, quizId, questionText, explanation, [order], createdAt, updatedAt)
+    sqlContent += `INSERT INTO questions (id, quizId, questionText, explanation, [order], createdAt, updatedAt)
 VALUES ('${questionId}', '${quizData.id}', '${escapeSQL(q.questionText)}', '${escapeSQL(fullExplanation)}', ${i + 1}, datetime('now'), datetime('now'));
-`;
 
-    execSync(`wrangler d1 execute medquiz-db --remote --command="${questionSQL.replace(/\n/g, ' ').trim()}"`, { stdio: 'inherit' });
+`;
 
     // Créer les réponses
     for (let j = 0; j < q.answers.length; j++) {
       const answer = q.answers[j];
       const answerId = `${questionId}-a${j + 1}`;
       
-      const answerSQL = `
-INSERT INTO answers (id, questionId, answerText, isCorrect, [order], createdAt)
+      sqlContent += `INSERT INTO answers (id, questionId, answerText, isCorrect, [order], createdAt)
 VALUES ('${answerId}', '${questionId}', '${escapeSQL(answer.answerText)}', ${answer.isCorrect ? 1 : 0}, ${j + 1}, datetime('now'));
-`;
 
-      execSync(`wrangler d1 execute medquiz-db --remote --command="${answerSQL.replace(/\n/g, ' ').trim()}"`, { stdio: 'inherit' });
+`;
     }
   }
 
-  console.log(`✅ Quiz "${quizData.title}" created with ${quizData.questions.length} questions`);
+  console.log(`✅ Quiz "${quizData.title}" prepared with ${quizData.questions.length} questions`);
 }
+
+// Écrire le fichier SQL
+fs.writeFileSync(sqlFile, sqlContent, 'utf-8');
+console.log(`\n📄 SQL file generated: ${sqlFile}`);
+
+// Exécuter le fichier SQL
+console.log('🚀 Executing SQL file on D1...');
+execSync(`wrangler d1 execute medquiz-db --remote --file="${sqlFile}"`, { stdio: 'inherit' });
+
+// Supprimer le fichier temporaire
+fs.unlinkSync(sqlFile);
 
 console.log('\n🎉 All nephrology questions imported successfully!');
 console.log(`📊 Total: ${data.questions.length} questions across ${quizzes.length} quizzes`);
-
