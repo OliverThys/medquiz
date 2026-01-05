@@ -49,7 +49,7 @@ export default function HomePage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-stone-50 flex flex-col">
+      <div className="min-h-screen bg-stone-100 flex flex-col">
         <Header />
         <div className="container mx-auto px-4 py-20 text-center flex-1">
           <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-orange-500 border-t-transparent"></div>
@@ -61,7 +61,7 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-stone-50 flex flex-col">
+    <div className="min-h-screen bg-stone-100 flex flex-col">
       <Header />
 
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
@@ -119,7 +119,7 @@ export default function HomePage() {
                   {/* Category Header - Clickable */}
                   <button
                     onClick={() => toggleCategory(category.id)}
-                    className="w-full flex items-center justify-between gap-3 p-4 rounded-xl bg-white hover:bg-stone-50 transition-colors border border-stone-200 hover:border-stone-300 group shadow-sm"
+                    className="w-full flex items-center justify-between gap-3 p-4 rounded-xl bg-white hover:bg-stone-50 transition-colors border border-stone-300 hover:border-stone-400 group shadow-md"
                   >
                     <div className="flex items-center gap-3 flex-1">
                       <div

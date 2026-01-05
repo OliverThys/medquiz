@@ -127,7 +127,7 @@ export default function CategoryQuizPage({ params }: { params: Promise<{ id: str
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-stone-50 flex flex-col">
+      <div className="min-h-screen bg-stone-100 flex flex-col">
         <Header />
         <div className="container mx-auto px-4 py-20 text-center flex-1">
           <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-orange-500 border-t-transparent"></div>
@@ -140,7 +140,7 @@ export default function CategoryQuizPage({ params }: { params: Promise<{ id: str
 
   if (!quiz) {
     return (
-      <div className="min-h-screen bg-stone-50 flex flex-col">
+      <div className="min-h-screen bg-stone-100 flex flex-col">
         <Header />
         <div className="container mx-auto px-4 py-20 text-center flex-1">
           <p className="text-stone-700 mb-6">Quiz non trouvé</p>
@@ -159,7 +159,7 @@ export default function CategoryQuizPage({ params }: { params: Promise<{ id: str
     const percentage = Math.round((correctCount / totalQuestions) * 100);
 
     return (
-      <div className="min-h-screen bg-stone-50 flex flex-col">
+      <div className="min-h-screen bg-stone-100 flex flex-col">
         <Header />
         <main className="container mx-auto px-4 py-8 max-w-4xl flex-1">
           <Card className="animate-scale-in">
@@ -243,7 +243,7 @@ export default function CategoryQuizPage({ params }: { params: Promise<{ id: str
     : 0;
 
   return (
-    <div className="min-h-screen bg-stone-50 flex flex-col">
+    <div className="min-h-screen bg-stone-100 flex flex-col">
         <Header />
 
         <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 max-w-3xl flex-1">
@@ -288,12 +288,12 @@ export default function CategoryQuizPage({ params }: { params: Promise<{ id: str
                     disabled={isValidated}
                     className={`w-full text-left p-3 sm:p-4 rounded-lg border-2 transition-all ${
                       showCorrect
-                        ? 'border-green-500 bg-green-50'
+                        ? 'border-green-500 bg-green-50 shadow-sm'
                         : showIncorrect
-                        ? 'border-red-500 bg-red-50'
+                        ? 'border-red-500 bg-red-50 shadow-sm'
                         : isSelected
-                        ? 'border-orange-500 bg-orange-50'
-                        : 'border-stone-200 hover:border-orange-500 bg-white'
+                        ? 'border-orange-500 bg-orange-50 shadow-sm'
+                        : 'border-stone-300 hover:border-orange-500 bg-white shadow-sm hover:shadow-md'
                     } ${isValidated ? 'cursor-default' : 'cursor-pointer'}`}
                   >
                     <div className="flex items-center gap-3">
