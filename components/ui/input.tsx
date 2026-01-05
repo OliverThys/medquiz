@@ -15,7 +15,7 @@ export function Input({ label, error, className = '', ...props }: InputProps) {
       )}
       <input
         className={`w-full px-4 py-2.5 bg-white border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all text-neutral-900 placeholder:text-neutral-400 ${
-          error ? 'border-red-300 focus:ring-red-400 : ''
+          error ? 'border-red-300 focus:ring-red-400' : ''
         } ${className}`}
         {...props}
       />
@@ -39,7 +39,7 @@ export function TextArea({ label, error, className = '', ...props }: TextAreaPro
       )}
       <textarea
         className={`w-full px-4 py-2.5 bg-white border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all text-neutral-900 placeholder:text-neutral-400 resize-vertical min-h-[100px] ${
-          error ? 'border-red-300 focus:ring-red-400 : ''
+          error ? 'border-red-300 focus:ring-red-400' : ''
         } ${className}`}
         {...props}
       />
@@ -47,4 +47,5 @@ export function TextArea({ label, error, className = '', ...props }: TextAreaPro
     </div>
   );
 }
+
 
