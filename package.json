@@ -10,6 +10,7 @@
     "lint": "next lint",
     "seed": "tsx prisma/seed.ts",
     "seed:nephro": "tsx prisma/seed-nephrologie.ts",
+    "seed:d1": "tsx scripts/seed-d1.ts",
     "postinstall": "npx prisma@6.1.0 generate",
     "pages:install": "npm install --legacy-peer-deps"
   },
