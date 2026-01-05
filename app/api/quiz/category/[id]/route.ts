@@ -1,58 +1,71 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
 
 export const runtime = 'edge';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = await params;
+    const { id } = await context.params;
 
-    // Récupérer la catégorie avec tous ses quizzes et questions
-    const category = await prisma.category.findUnique({
-      where: { id },
-      include: {
-        quizzes: {
-          include: {
-            questions: {
-              include: {
-                answers: {
-                  orderBy: {
-                    order: 'asc',
-                  },
-                },
-              },
-              orderBy: {
-                order: 'asc',
-              },
-            },
-          },
-        },
-      },
-    });
+    // Access D1 database from Cloudflare binding
+    const env = (context as any).cloudflare?.env;
+    if (!env?.DB) {
+      return NextResponse.json(
+        { error: 'Database not available' },
+        { status: 503 }
+      );
+    }
 
-    if (!category) {
+    // Get category
+    const categoryResult = await env.DB.prepare(
+      'SELECT * FROM categories WHERE id = ?'
+    ).bind(id).first();
+
+    if (!categoryResult) {
       return NextResponse.json(
         { error: 'Category not found' },
         { status: 404 }
       );
     }
 
-    // Combiner toutes les questions de tous les quizzes de la catégorie
-    const allQuestions = category.quizzes.flatMap(quiz => quiz.questions);
+    // Get all quizzes for this category
+    const quizzesResult = await env.DB.prepare(
+      'SELECT id FROM quizzes WHERE categoryId = ?'
+    ).bind(id).all();
 
-    // Créer un quiz virtuel avec toutes les questions
+    const quizzes = quizzesResult.results || [];
+
+    // Get all questions from all quizzes
+    const allQuestions = [];
+    for (const quiz of quizzes) {
+      const questionsResult = await env.DB.prepare(
+        'SELECT * FROM questions WHERE quizId = ? ORDER BY [order] ASC'
+      ).bind(quiz.id).all();
+
+      for (const question of (questionsResult.results || [])) {
+        const answersResult = await env.DB.prepare(
+          'SELECT * FROM answers WHERE questionId = ? ORDER BY [order] ASC'
+        ).bind(question.id).all();
+
+        allQuestions.push({
+          ...question,
+          answers: answersResult.results || [],
+        });
+      }
+    }
+
+    // Create virtual quiz with all questions
     const virtualQuiz = {
-      id: `category-${category.id}`,
-      title: `${category.name} - Toutes les questions`,
-      description: `Quiz complet avec toutes les questions de ${category.name}`,
+      id: `category-${categoryResult.id}`,
+      title: `${categoryResult.name} - Toutes les questions`,
+      description: `Quiz complet avec toutes les questions de ${categoryResult.name}`,
       difficulty: 'medium',
       category: {
-        id: category.id,
-        name: category.name,
-        color: category.color,
+        id: categoryResult.id,
+        name: categoryResult.name,
+        color: categoryResult.color,
       },
       questions: allQuestions,
     };

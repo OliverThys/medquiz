@@ -1,45 +1,53 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { prisma } from '@/lib/prisma';
 
-async function getCategories() {
-  try {
-    const categories = await prisma.category.findMany({
-      include: {
-        quizzes: {
-          include: {
-            _count: {
-              select: {
-                questions: true,
-              },
-            },
-          },
-          orderBy: {
-            updatedAt: 'desc',
-          },
-        },
-      },
-      orderBy: {
-        createdAt: 'desc',
-      },
-    });
-    return categories;
-  } catch (error) {
-    console.error('Error fetching categories:', error);
-    return [];
-  }
-}
+export const dynamic = 'force-dynamic';
 
-export default async function HomePage() {
-  const categories = await getCategories();
+export default function HomePage() {
+  const [categories, setCategories] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchCategories() {
+      try {
+        const response = await fetch('/api/categories');
+        if (response.ok) {
+          const data = await response.json();
+          setCategories(data);
+        }
+      } catch (error) {
+        console.error('Error fetching categories:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchCategories();
+  }, []);
+
   const totalQuizzes = categories.reduce((sum, cat) => sum + cat.quizzes.length, 0);
   const totalQuestions = categories.reduce(
-    (sum, cat) => sum + cat.quizzes.reduce((qSum, quiz) => qSum + (quiz._count?.questions || 0), 0),
+    (sum, cat) => sum + cat.quizzes.reduce((qSum: number, quiz: any) => qSum + (quiz._count?.questions || 0), 0),
     0
   );
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950 flex flex-col">
+        <Header />
+        <div className="container mx-auto px-4 py-20 text-center flex-1">
+          <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-orange-500 dark:border-orange-600 border-t-transparent"></div>
+          <p className="mt-4 text-neutral-600 dark:text-neutral-400">Chargement...</p>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950 flex flex-col">
@@ -88,12 +96,6 @@ export default async function HomePage() {
                 </svg>
               </div>
               <p className="text-neutral-600 dark:text-neutral-400 mb-6">Aucune catégorie disponible pour le moment.</p>
-              <Link
-                href="/admin/categories/new"
-                className="inline-flex items-center px-5 py-2.5 rounded-lg bg-orange-500 text-white font-medium hover:bg-orange-600 transition-colors"
-              >
-                Créer une catégorie
-              </Link>
             </CardContent>
           </Card>
         ) : (
@@ -127,7 +129,7 @@ export default async function HomePage() {
                 {/* Quizzes Grid */}
                 {category.quizzes.length > 0 ? (
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {category.quizzes.map((quiz) => {
+                    {category.quizzes.map((quiz: any) => {
                       const isComprehensiveQuiz = quiz.title.toLowerCase().includes('toutes les questions') ||
                                                   quiz.title.toLowerCase().includes('mélangées');
 
