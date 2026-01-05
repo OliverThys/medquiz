@@ -1,13 +1,13 @@
 import 'server-only';
 import { NextResponse } from 'next/server';
-import { getRequestContext } from '@cloudflare/next-on-pages';
+import { getD1FromRequest } from '@/lib/cloudflare';
 
 export const runtime = 'edge';
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
-    const { env } = getRequestContext();
-    if (!env?.DB) {
+    const DB = getD1FromRequest(request);
+    if (!DB) {
       return NextResponse.json(
         { error: 'Database not available' },
         { status: 503 }
@@ -15,21 +15,21 @@ export async function GET() {
     }
 
     // Get all categories
-    const categoriesResult = await env.DB.prepare(
+    const categoriesResult = await DB.prepare(
       'SELECT * FROM categories ORDER BY createdAt DESC'
     ).all();
 
     const categories = await Promise.all(
       (categoriesResult.results || []).map(async (category: any) => {
         // Get quizzes for this category
-        const quizzesResult = await env.DB.prepare(
+        const quizzesResult = await DB.prepare(
           'SELECT * FROM quizzes WHERE categoryId = ? ORDER BY updatedAt DESC'
         ).bind(category.id).all();
 
         // Get question count for each quiz
         const quizzes = await Promise.all(
           (quizzesResult.results || []).map(async (quiz: any) => {
-            const countResult = await env.DB.prepare(
+            const countResult = await DB.prepare(
               'SELECT COUNT(*) as count FROM questions WHERE quizId = ?'
             ).bind(quiz.id).first();
 

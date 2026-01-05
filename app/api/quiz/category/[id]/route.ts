@@ -1,6 +1,6 @@
 import 'server-only';
 import { NextResponse } from 'next/server';
-import { getRequestContext } from '@cloudflare/next-on-pages';
+import { getD1FromRequest } from '@/lib/cloudflare';
 
 export const runtime = 'edge';
 
@@ -12,8 +12,8 @@ export async function GET(
     const { id } = await context.params;
 
     // Access D1 database from Cloudflare binding
-    const { env } = getRequestContext();
-    if (!env?.DB) {
+    const DB = getD1FromRequest(request);
+    if (!DB) {
       return NextResponse.json(
         { error: 'Database not available' },
         { status: 503 }
@@ -21,7 +21,7 @@ export async function GET(
     }
 
     // Get category
-    const categoryResult = await env.DB.prepare(
+    const categoryResult = await DB.prepare(
       'SELECT * FROM categories WHERE id = ?'
     ).bind(id).first();
 
@@ -33,7 +33,7 @@ export async function GET(
     }
 
     // Get all quizzes for this category
-    const quizzesResult = await env.DB.prepare(
+    const quizzesResult = await DB.prepare(
       'SELECT id FROM quizzes WHERE categoryId = ?'
     ).bind(id).all();
 
@@ -42,12 +42,12 @@ export async function GET(
     // Get all questions from all quizzes
     const allQuestions = [];
     for (const quiz of quizzes) {
-      const questionsResult = await env.DB.prepare(
+      const questionsResult = await DB.prepare(
         'SELECT * FROM questions WHERE quizId = ? ORDER BY [order] ASC'
       ).bind(quiz.id).all();
 
       for (const question of (questionsResult.results || [])) {
-        const answersResult = await env.DB.prepare(
+        const answersResult = await DB.prepare(
           'SELECT * FROM answers WHERE questionId = ? ORDER BY [order] ASC'
         ).bind(question.id).all();
 
