@@ -31,8 +31,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       htmlElement.classList.remove('dark');
     }
     
-    // Forcer la mise à jour du style
+    // Forcer la mise à jour du style et du color-scheme
     htmlElement.style.colorScheme = initialTheme;
+    document.body.style.colorScheme = initialTheme;
   }, []);
 
   const toggleTheme = () => {
@@ -48,8 +49,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       htmlElement.classList.remove('dark');
     }
     
-    // Forcer la mise à jour du style
+    // Forcer la mise à jour du style et du color-scheme
     htmlElement.style.colorScheme = newTheme;
+    document.body.style.colorScheme = newTheme;
   };
 
   // Éviter le flash de contenu non stylé
