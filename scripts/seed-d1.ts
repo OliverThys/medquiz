@@ -121,7 +121,7 @@ VALUES ('${quizData.id}', '${escapeSQL(quizData.title)}', '${escapeSQL(quizData.
 
     // Créer la question
     const questionSQL = `
-INSERT INTO questions (id, quizId, questionText, explanation, "order", createdAt, updatedAt)
+INSERT INTO questions (id, quizId, questionText, explanation, [order], createdAt, updatedAt)
 VALUES ('${questionId}', '${quizData.id}', '${escapeSQL(q.questionText)}', '${escapeSQL(fullExplanation)}', ${i + 1}, datetime('now'), datetime('now'));
 `;
 
@@ -133,7 +133,7 @@ VALUES ('${questionId}', '${quizData.id}', '${escapeSQL(q.questionText)}', '${es
       const answerId = `${questionId}-a${j + 1}`;
       
       const answerSQL = `
-INSERT INTO answers (id, questionId, answerText, isCorrect, "order", createdAt)
+INSERT INTO answers (id, questionId, answerText, isCorrect, [order], createdAt)
 VALUES ('${answerId}', '${questionId}', '${escapeSQL(answer.answerText)}', ${answer.isCorrect ? 1 : 0}, ${j + 1}, datetime('now'));
 `;
 
