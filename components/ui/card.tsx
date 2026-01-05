@@ -9,12 +9,12 @@ interface CardProps {
 
 export function Card({ children, hover = false, className = '', onClick }: CardProps) {
   const hoverClasses = hover
-    ? 'cursor-pointer hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200'
+    ? 'cursor-pointer hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200'
     : '';
 
   return (
     <div
-      className={`bg-stone-600 rounded-xl border border-stone-500 shadow-sm ${hoverClasses} ${className}`}
+      className={`bg-white rounded-xl border border-stone-200 shadow-sm ${hoverClasses} ${className}`}
       onClick={onClick}
     >
       {children}
@@ -24,7 +24,7 @@ export function Card({ children, hover = false, className = '', onClick }: CardP
 
 export function CardHeader({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
-    <div className={`px-6 py-4 border-b border-stone-100 ${className}`}>
+    <div className={`px-6 py-4 border-b border-stone-200 ${className}`}>
       {children}
     </div>
   );
@@ -35,6 +35,6 @@ export function CardContent({ children, className = '' }: { children: React.Reac
 }
 
 export function CardTitle({ children, className = '' }: { children: React.ReactNode; className?: string }) {
-  return <h3 className={`text-lg font-semibold text-stone-50 ${className}`}>{children}</h3>;
+  return <h3 className={`text-lg font-semibold text-stone-900 ${className}`}>{children}</h3>;
 }
 
