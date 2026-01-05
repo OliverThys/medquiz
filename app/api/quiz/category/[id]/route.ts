@@ -1,16 +1,20 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
 export const runtime = 'edge';
 
+interface Env {
+  DB: D1Database;
+}
+
 export async function GET(
-  request: NextRequest,
-  context: { params: Promise<{ id: string }> }
+  request: Request,
+  context: { params: Promise<{ id: string }>; env: Env }
 ) {
   try {
     const { id } = await context.params;
 
     // Access D1 database from Cloudflare binding
-    const env = (context as any).cloudflare?.env;
+    const env = context.env;
     if (!env?.DB) {
       return NextResponse.json(
         { error: 'Database not available' },

@@ -17,20 +17,31 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     setMounted(true);
-    // Récupérer le thème depuis localStorage ou préférence système
+    // Récupérer le thème depuis localStorage, par défaut light (pas de préférence système)
     const savedTheme = localStorage.getItem('theme') as Theme;
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+    const initialTheme = savedTheme || 'light';
     setTheme(initialTheme);
-    document.documentElement.classList.toggle('dark', initialTheme === 'dark');
+
+    // Appliquer le thème au DOM
+    if (initialTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
   }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
+
+    // Appliquer le thème au DOM
+    if (newTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
   };
 
   // Éviter le flash de contenu non stylé

@@ -4,9 +4,9 @@ const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined;
 };
 
-// Base de données locale désactivée - utilisation de D1 Cloudflare en production
-// Toutes les requêtes retourneront des valeurs vides pour éviter les erreurs
-const DATABASE_DISABLED = true;
+// Base de données locale désactivée en production - utilisation de D1 Cloudflare
+// En développement, Prisma est activé pour utiliser la base SQLite locale
+const DATABASE_DISABLED = process.env.NODE_ENV === 'production';
 
 // Créer un mock Prisma qui retourne des valeurs vides
 function createMockPrisma(): PrismaClient {
