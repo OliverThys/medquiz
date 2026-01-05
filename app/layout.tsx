@@ -18,9 +18,6 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   title: "MedQuiz - Révision Médicale Interactive",
   description: "Plateforme moderne de QCM pour réviser vos cours de médecine",
-  icons: {
-    icon: '/icon.svg',
-  },
 };
 
 export default function RootLayout({
